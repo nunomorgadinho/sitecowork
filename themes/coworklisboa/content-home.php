@@ -12,10 +12,10 @@
     
     <div class="competition_slider">
 
-	    <article class="competition_form_landing">
+	    <article class="box-middle">
 	        
 	        
-	        <h3><?php _e('Add a life to your work today:','cowork')?></h3>
+	        <h1 class="general-title"><?php _e('Add a life to your work today:','cowork')?></h3>
 	        
 	        
 	        <ul>
@@ -38,12 +38,12 @@
 	    	</p>
 	        
 	       
-	         <a class="navigate-link" href="#"><?php _e('> next','cowork');?></a>	
+	         <p class="navigate"><a class="navigate-link" href="#"><?php _e('> next','cowork');?></a></p>	
         	
 	    </article>
 
 	
-	    <article class="competition_form_register">
+	    <!-- <article class="competition_form_register">
 	      <h4><?php _e('until March 25th','rec');?></h4>
 	      <div class="marker"></div>
 	      <h1>Registration</h1>
@@ -67,7 +67,7 @@
 	      	<div class="button_container_2">
 			<div id="competition_back"><div class="competition_back_button"></div><a href="#"><p><?php _e('Back','rec');?></p></a></div>
 	        <div id="competition_compete" class="final"><a href="#"><p><?php _e('Lets do it','rec');?></p><p class="microcopy"><?php _e('Just click on the button','rec');?></p></a></div>
-			<!-- <div class="competition_output"></div> -->
+			<!-- <div class="competition_output"></div>
 			</div>	      
 	      </div>
 	    </article>
@@ -78,7 +78,7 @@
 	      <div class="marker"></div>
 	      <h2><?php _e('You will hear from us in a short notice','rec');?></h2>
 	      
-	    </article>
+	    </article>-->
 	
 	    <span class="clear"></span>
     

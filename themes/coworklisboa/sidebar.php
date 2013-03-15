@@ -7,7 +7,7 @@
  */
 ?>
 		<div id="secondary" class="widget-area" role="complementary">
-			<?php do_action( 'before_sidebar' ); ?>
+			<!-- <?php do_action( 'before_sidebar' ); ?>
 			<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
 				<aside id="search" class="widget widget_search">
@@ -28,7 +28,9 @@
 						<li><?php wp_loginout(); ?></li>
 						<?php wp_meta(); ?>
 					</ul>
-				</aside>
+				</aside> -->
+
+				<a href="#"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/zon.png"></a>
 
 			<?php endif; // end sidebar widget area ?>
 		</div><!-- #secondary .widget-area -->
