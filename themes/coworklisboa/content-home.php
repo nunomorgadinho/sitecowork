@@ -8,20 +8,7 @@
 ?>
 
 
-   <ul>
-		        	<li>
-		        		<?php _e('choose workplace','cowork');?>
-		        	</li>
-		        	<li>
-		        		<?php _e('choose plan','cowork');?>
-		        	</li>
-		        	<li>
-		        		<?php _e('choose desk','cowork');?>
-		        	</li>
-		        	<li>
-		        		<?php _e('choose life','cowork');?>
-		        	</li>
-		        </ul>
+  
     
     <div class="competition_slider">
 
@@ -29,60 +16,30 @@
 	        
 	        
 	        <h3><?php _e('Add a life to your work today:','cowork')?></h3>
-	        <form action="#" name="quiz_update" id="quiz_update" method="post">
 	        
-	        <div class="wrapper">
-			<div class="expand_wrapper">
-			
-				<div class="question-group closed">
-					<h4 class="expand_heading"><?php _e('choose workplace','cowork');?></h4>
-					<div class="toggle_container">
-						<div class="form-row form-row-first">
-            			<ul>
-						<li><span title="Selecione até três opções" class="option5 filtrounico <?php echo is_selected("mais_gosta", "Perfumes"); ?>">Perfumes</span></li>
-						<li><span title="Selecione até três opções" class="option5 filtrounico <?php echo is_selected("mais_gosta", "Cabelo"); ?>">Cabelo</span></li>
-						<li><span title="Selecione até três opções" class="option5 filtrounico <?php echo is_selected("mais_gosta", "Tratamento do Rosto"); ?>">Tratamento do Rosto</span></li>
-						<li><span title="Selecione até três opções" class="option5 filtrounico <?php echo is_selected("mais_gosta", "Solares"); ?>">Solares</span></li>
-					</ul>
-          </div>
-						        
-						        <p class="form-row">
-						          <label class="question" for="tipo_sensibilidade">E quanto à sensibilidade?<abbr class="required" title="required">*</abbr></label>
-						          <select id="tipo_sensibilidade" name="tipo_sensibilidade" class="element-med">
-						            
-						            <option value="Neutra/Normal" <?php if ($meta['tipo_sensibilidade'] == "Neutra/Normal") echo 'selected'; ?>>Neutra/Normal</option>
-						            <option value="Sensível" <?php if ($meta['tipo_sensibilidade'] == "Sensível") echo 'selected'; ?>>Sensível</option>
-						          </select>
-						        </p>
-						
-						        <p class="form-row">
-						          <label class="question" for="tom_pele">Qual é o seu tom de pele?<abbr class="required" title="required">*</abbr></label>
-						          <select id="tom_pele" name="tom_pele" class="element-med">
-						            
-						            <option value="Claro" <?php if ($meta['tom_pele'] == "Claro") echo 'selected'; ?>>Claro</option>
-						            <option value="Médio" <?php if ($meta['tom_pele'] == "Médio") echo 'selected'; ?>>Médio</option>
-						            <option value="Moreno" <?php if ($meta['tom_pele'] == "Moreno") echo 'selected'; ?>>Moreno</option>
-						            <option value="Escuro" <?php if ($meta['tom_pele'] == "Escuro") echo 'selected'; ?>>Escuro</option>
-						          </select>
-						        </p>
-						      </div>  <!-- toggle_container -->
-				</div>  <!-- question-group -->
-	  
-			
-			
 	        
-		       
-		        
-		     </div> <!-- .expand_wrapper -->
-		     </div> <!-- .wrapper -->
-		    
-		    	<p class="small">
-		    		<?php _e("Yes, it's that simple. Now a human will take your subscription from here. We love you already dear.", 'cowork')?>
-		    	</p>
-		        
-		       
-		         <a class="navigate-link" href="#"><?php _e('> next','cowork');?></a>	
-        	</form>
+	        <ul>
+	        	<li>
+	        		<?php _e('choose workplace','cowork');?>
+	        	</li>
+	        	<li>
+	        		<?php _e('choose plan','cowork');?>
+	        	</li>
+	        	<li>
+	        		<?php _e('choose desk','cowork');?>
+	        	</li>
+	        	<li>
+	        		<?php _e('choose life','cowork');?>
+	        	</li>
+	        </ul>
+	    
+	    	<p class="small">
+	    		<?php _e("Yes, it's that simple. Now a human will take your subscription from here. We love you already dear.", 'cowork')?>
+	    	</p>
+	        
+	       
+	         <a class="navigate-link" href="#"><?php _e('> next','cowork');?></a>	
+        	
 	    </article>
 
 	
