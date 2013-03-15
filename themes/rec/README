@@ -1,0 +1,82 @@
+REC File Structure
+==============
+This document describes how REC theme files are organized.
+The MVC pattern was used to make everything more realiable and mantained.
+
+VIEWS
+=====
+
+rec/
+	*.php 				Generic Template files (entrypoints for WordPress and View part of the MVC pattern)
+		index.php				Generic entrypoint
+		home.php				Homepage View
+		page.php				Generic Page handler
+		search.php				Search View
+		404.php					404 View
+		
+	archive-*.php		Archive Template files (entrypoints for WordPress and View part of the MVC pattern)
+		archive-video.php		Archive Projects (loop)
+		archive-contest.php		Archive Contests (loop)
+		archive-joboffer.php	Archive Job Offers (loop)
+	
+	single-*.php		Single Template files (entrypoints for WordPress and View part of the MVC pattern)
+		single-video.php		Single Project View
+		single-joboffer.php 	Single Job Offer View
+		single-competition.php	Single Competition View
+		
+	content-*.php		Covers almost loop structures (to be included in archive and home)
+		content-video.php		Content Project View
+		content-joboffer.php 	Content Job Offer View
+		content-competition.php	Content Competition View
+		
+	comments.php		Display Comments and Trackbacks
+		content-comment.php		Content comment View
+		comment-form.php		The comment form
+
+	header.php
+	footer.php
+	no-results.php		404.php and other loop files point to this file when nothing have been found
+	searchform.php		Search bar View
+	
+	maintenance.php		Maintenance File
+	
+	
+rec/template-sections/
+	*.php			Template sections (helpers)
+	
+	
+MODELS (LOGIC)
+==============
+rec/inc/
+
+	objects/*.php		Custom post types and other single objects
+						All the logic, DB, Ajax process and Admin side ends here.
+						
+	taxonomies/*.php	Custom taxonomies logic & admin side
+	
+	connections/*.php	Objects connections defined here (logic and admin)
+	
+		
+HELPERS
+=======
+rec/inc/
+
+	libs/*.php			Classes and other helper libraries to be included when necessary
+	
+	functions.php		Generic functions
+	
+	extras.php			Filters for core functions as actions
+	
+	template-tags.php	Every custom template tags to be used in Views end here
+	
+
+
+CONTROLLERS
+===========
+rec/
+	functions.php		The template controller. Loads everything.
+						High level conditionals like is_admin() is used here to balance the files included.
+						
+	inc/ajax.php		Ajax entrypoints for ajax calls. Distress calls.
+	
+	

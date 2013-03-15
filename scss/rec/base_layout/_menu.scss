@@ -1,0 +1,199 @@
+// the general layout of the page is defined here.
+// you can either dump all your styles here, or divide them in smaller files like _header.scss, _footer.scss
+// This is the layout of the menu.
+
+
+//General Header
+
+ul {
+	margin: 0;
+}
+
+#masthead {
+	@include height (70);
+	background-image: url(images/background-home.png);
+	width: 100%;
+	@include box-shadow ($darkgrey 0px -1px 8px);
+	z-index: 999;
+	position: fixed;
+}
+
+.site-navigation {
+	@include container;
+	@include padding-pair(6,0);
+}
+
+.main-navigation a {
+	@include line-height(32);
+}
+
+// Logo
+
+a.site-title {
+	text-align: center;
+	@include span-columns(2,12);
+	@include line-height (12);
+}
+
+// Main Menu
+.menu {
+	@include span-columns (5,12);
+	@include margin-top (18);
+
+	li {
+		float:left;
+	}
+
+	a { 
+			@include margin-right (30);
+			color: $lightgrey;
+			font-family: $f-regular;
+			@include border-radius(0px, 1px);
+			@include font-size (16);
+			@include padding-pair (0,12);
+			@include transition-property (background);
+			@include transition-duration (0.2s);
+	&:hover {
+			  background: $darkgrey;
+	  		  text-decoration: none;
+	  		}
+
+	  }
+}
+
+// User Area
+
+.user-area {
+	@include span-columns (3,12);
+}
+
+.user-box {
+	@extend %clearfix;
+	@include margin-top (18);
+	@include margin-right (18);
+	float: left;
+
+	h1, ul li {
+		@include padding-pair (2,16);
+	}
+	a {
+		color: $white;
+		font-family: $f-regular;
+		@include font-size (18);
+		text-decoration: none;
+	}
+
+}
+
+h1.user-title{
+	@include transition-property (background);
+	@include transition-duration (0.1s);
+	@include margin-bottom (0);
+	cursor: pointer;
+
+	.user-box:hover & {
+		background: $darkgrey;	
+	}
+
+	a{
+		@include font-size (20);
+		font-family: $f-black;
+		@include min-width (150);
+		@include max-width (170);
+	}
+}
+
+.user-box ul {
+	position: relative;
+	display:none;
+	li {
+		a{
+			@include font-size (16);
+		}
+		@include transition-property (background);
+		@include transition-duration (0.1s);
+		background: $darkgrey;
+		clear: both;
+		display: block;
+		&:hover {
+			background: $grey;
+		}
+	}
+}
+
+
+.user-box:hover > ul {
+	display: block;
+}
+
+
+
+// Search Area
+
+.header-search {
+	@include span-columns (2 omega,12);
+	@include margin-top (20);
+}
+
+
+// Notification Area
+
+.notification-section {
+	cursor: pointer;
+	@include margin-top (22);
+	@include width (25);
+	@include height (25);
+	background: $mediumgrey;
+	@include border-radius (50%);
+	display: inline-block;
+	@extend %float-right;
+	text-align: center;
+	vertical-align: middle;
+
+	@include single-transition (all, 0.2s);
+
+	&:hover {
+		@include border-radius (0);
+	}
+
+	p {
+		@include margin-top(1);
+		@include margin-right(1);
+		@include line-height (24);
+		color: $darkwhite;
+		font-family: $f-bold;
+		cursor: pointer;
+		@include margin-bottom (0);
+	}
+
+	ul {
+		@include padding-top (12);
+		display: none;
+		background: $mediumgrey;
+		position: absolute;
+		text-align: left;
+	}
+
+	li {
+		@include padding-pair (6,12);
+		width: auto;
+		color: $darkwhite;
+		&:hover {
+			background: $grey;
+		}
+	}
+
+	a {
+		@include line-height (16);
+		color: $darkwhite;
+		text-decoration: none;
+	}
+}
+
+.alert {
+	background: $red;
+}
+
+.notification-section:hover > ul {
+	display: block;
+}

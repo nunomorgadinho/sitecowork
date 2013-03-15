@@ -1,0 +1,27 @@
+// the modules directory is where you can add classes for the parts of your layout, like widgets, 
+// This is where the load more section will be stylized
+
+.load-more {
+	@extend %clearfix;
+	@include padding-pair (24,0);
+	text-align:center;
+	button {
+		@include margin-pair (0,6);
+		@include padding-pair (6,12);
+		@include border-radius (3px);
+		border: none;
+		color: $darkwhite;
+		font-family: $f-bold;
+		@include font-size (16);
+		@include transition-property (background);
+		@include transition-duration (0.2s);
+
+		&:hover {
+			background: $grey;
+		}
+	}
+
+	.load-button {
+		background: $blue;
+	}
+}

@@ -1,0 +1,1524 @@
+/*
+Theme Name: Rec
+Theme URI: http://www.widgilabs.com/
+Author: WidgiLabs
+Author URI: http://widgilabs.com/
+Description: 
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+/* Fonts */
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url('fonts/OpenSans-Light-webfont.eot');
+    src: url('fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans-Light-webfont.woff') format('woff'),
+         url('fonts/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansLightItalic';
+    src: url('fonts/OpenSans-LightItalic-webfont.eot');
+    src: url('fonts/OpenSans-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans-LightItalic-webfont.woff') format('woff'),
+         url('fonts/OpenSans-LightItalic-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans-LightItalic-webfont.svg#OpenSansLightItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('fonts/OpenSans-Regular-webfont.eot');
+    src: url('fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans-Regular-webfont.svg#OpenSansRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansItalic';
+    src: url('fonts/OpenSans-Italic-webfont.eot');
+    src: url('fonts/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans-Italic-webfont.woff') format('woff'),
+         url('fonts/OpenSans-Italic-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans-Italic-webfont.svg#OpenSansItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansSemibold';
+    src: url('fonts/OpenSans-Semibold-webfont.eot');
+    src: url('fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans-Semibold-webfont.woff') format('woff'),
+         url('fonts/OpenSans-Semibold-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans-Semibold-webfont.svg#OpenSansSemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansSemiboldItalic';
+    src: url('fonts/OpenSans-SemiboldItalic-webfont.eot');
+    src: url('fonts/OpenSans-SemiboldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans-SemiboldItalic-webfont.woff') format('woff'),
+         url('fonts/OpenSans-SemiboldItalic-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans-SemiboldItalic-webfont.svg#OpenSansSemiboldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url('fonts/OpenSans-Bold-webfont.eot');
+    src: url('fonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans-Bold-webfont.woff') format('woff'),
+         url('fonts/OpenSans-Bold-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans-Bold-webfont.svg#OpenSansBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansBoldItalic';
+    src: url('fonts/OpenSans-BoldItalic-webfont.eot');
+    src: url('fonts/OpenSans-BoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans-BoldItalic-webfont.woff') format('woff'),
+         url('fonts/OpenSans-BoldItalic-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans-BoldItalic-webfont.svg#OpenSansBoldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansExtrabold';
+    src: url('fonts/OpenSans-ExtraBold-webfont.eot');
+    src: url('fonts/OpenSans-ExtraBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans-ExtraBold-webfont.woff') format('woff'),
+         url('fonts/OpenSans-ExtraBold-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans-ExtraBold-webfont.svg#OpenSansExtrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'OpenSansExtraboldItalic';
+    src: url('fonts/OpenSans-ExtraBoldItalic-webfont.eot');
+    src: url('fonts/OpenSans-ExtraBoldItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans-ExtraBoldItalic-webfont.woff') format('woff'),
+         url('fonts/OpenSans-ExtraBoldItalic-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans-ExtraBoldItalic-webfont.svg#OpenSansExtraboldItalic') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ArvoRegular';
+    src: url('fonts/Arvo-Regular-webfont.eot');
+    src: url('fonts/Arvo-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Arvo-Regular-webfont.woff') format('woff'),
+         url('fonts/Arvo-Regular-webfont.ttf') format('truetype'),
+         url('fonts/Arvo-Regular-webfont.svg#ArvoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'ArvoBold';
+    src: url('fonts/Arvo-Bold-webfont.eot');
+    src: url('fonts/Arvo-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Arvo-Bold-webfont.woff') format('woff'),
+         url('fonts/Arvo-Bold-webfont.ttf') format('truetype'),
+         url('fonts/Arvo-Bold-webfont.svg#ArvoBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'BevanRegular';
+    src: url('fonts/Bevan-webfont.eot');
+    src: url('fonts/Bevan-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Bevan-webfont.woff') format('woff'),
+         url('fonts/Bevan-webfont.ttf') format('truetype'),
+         url('fonts/Bevan-webfont.svg#BevanRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* =Reset
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+	text-decoration: none;
+}
+html {
+	font-size: 62.5%; /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+	overflow-y: scroll; /* Keeps page centred in all browsers regardless of content height */
+	overflow-x: hidden;
+	-webkit-text-size-adjust: 100%; /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+	-ms-text-size-adjust: 100%; /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+body {
+	background: #fff;
+	color:#000;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+table { /* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a:focus {
+	outline: thin dotted;
+}
+a:hover,
+a:active { /* Improves readability when focused and also mouse hovered in all browsers people.opera.com/patrickl/experiments/keyboard/test */
+	outline: 0;
+}
+a img {
+	border: 0;
+}
+
+
+a.navigate-link{
+	color:red;
+}
+
+/* =Global
+----------------------------------------------- */
+
+body,
+button,
+input,
+textarea {
+	color: #404040;
+	font-family: sans-serif;
+	font-size: 16px;
+	font-size: 1.6rem;
+	line-height: 1.5;
+}
+
+select {
+	font-family: 'OpenSansLight';
+	font-size: 16px;
+	background-color: none;
+	outline: none;
+	border: none;
+}
+
+/* Headings */
+h1,h2,h3,h4,h5,h6 {
+	clear: both;
+}
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+/* Text elements */
+p {
+	margin-bottom: 1.5em;
+}
+
+ul {
+	list-style: none;
+	margin-top:1em;
+	margin-bottom:1em;
+}
+ol {
+	list-style: decimal;
+}
+ul ul, ol ol, ul ol, ol ul {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+dt {
+	font-weight: bold;
+}
+dd {
+	margin: 0 1.5em 1.5em;
+}
+b, strong {
+	font-weight: bold;
+}
+dfn, cite, em, i {
+	font-style: italic;
+}
+blockquote {
+	margin: 0 1.5em;
+}
+address {
+	margin: 0 0 1.5em;
+}
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 1.5rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	padding: 1.6em;
+	overflow: auto;
+	max-width: 100%;
+}
+code, kbd, tt, var {
+	font: 15px Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+}
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+sup,
+sub {
+	font-size: 75%;
+	height: 0;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	bottom: 1ex;
+}
+sub {
+	top: .5ex;
+}
+small {
+	font-size: 75%;
+}
+big {
+	font-size: 125%;
+}
+figure {
+	margin: 0;
+}
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+th {
+	font-weight: bold;
+}
+
+button,
+input,
+select,
+textarea {
+	font-size: 100%; /* Corrects font size not being inherited in all browsers */
+	margin: 0; /* Addresses margins set differently in IE6/7, F3/4, S5, Chrome */
+	vertical-align: baseline; /* Improves appearance and consistency in all browsers */
+	*vertical-align: middle; /* Improves appearance and consistency in all browsers */
+}
+button,
+input {
+	line-height: normal; /* Addresses FF3/4 setting line-height using !important in the UA stylesheet */
+	*overflow: visible;  /* Corrects inner spacing displayed oddly in IE6/7 */
+}
+
+/*
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid #ccc;
+	border-color: #ccc #ccc #bbb #ccc;
+	border-radius: 3px;
+	background: #e6e6e6;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 15px 17px rgba(255,255,255,0.5), inset 0 -5px 12px rgba(0,0,0,0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 15px 17px rgba(255,255,255,0.5), inset 0 -5px 12px rgba(0,0,0,0.05);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), inset 0 15px 17px rgba(255,255,255,0.5), inset 0 -5px 12px rgba(0,0,0,0.05);
+	color: rgba(0,0,0,.8);*/
+/*	cursor: pointer;*/ /* Improves usability and consistency of cursor style between image-type 'input' and others */
+/*	-webkit-appearance: button; *//* Corrects inability to style clickable 'input' types in iOS */
+/*	font-size: 12px;
+	font-size: 1.4rem;
+	line-height: 1;
+	padding: 1.12em 1.5em 1em;
+	text-shadow: 0 1px 0 rgba(255,255,255,.8);
+}*/
+
+/*
+button:hover,
+html input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa #bbb;
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 15px 17px rgba(255,255,255,0.8), inset 0 -5px 12px rgba(0,0,0,0.02);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 15px 17px rgba(255,255,255,0.8), inset 0 -5px 12px rgba(0,0,0,0.02);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.8), inset 0 15px 17px rgba(255,255,255,0.8), inset 0 -5px 12px rgba(0,0,0,0.02);
+}*/
+/*
+button:focus,
+html input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+html input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	border-color: #aaa #bbb #bbb #bbb;
+	-webkit-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.5), inset 0 2px 5px rgba(0,0,0,0.15);
+	-moz-box-shadow: inset 0 -1px 0 rgba(255,255,255,0.5), inset 0 2px 5px rgba(0,0,0,0.15);
+	box-shadow: inset 0 -1px 0 rgba(255,255,255,0.5), inset 0 2px 5px rgba(0,0,0,0.15);
+}*/
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box; /* Addresses box sizing set to content-box in IE8/9 */
+	padding: 0; /* Addresses excess padding in IE8/9 */
+}
+input[type="search"] {
+	-webkit-appearance: textfield; /* Addresses appearance set to searchfield in S5, Chrome */
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box; /* Addresses box sizing set to border-box in S5, Chrome (include -moz to future-proof) */
+	box-sizing: content-box;
+}
+input[type="search"]::-webkit-search-decoration { /* Corrects inner padding displayed oddly in S5, Chrome on OSX */
+	-webkit-appearance: none;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner { /* Corrects inner padding and border displayed oddly in FF3/4 www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/ */
+	border: 0;
+	padding: 0;
+}
+input[type=text],
+input[type=email],
+textarea {
+	color: #666;
+	border: none;
+	border-radius: 2px;
+	outline: none;
+}
+input[type=text]:focus,
+input[type=email]:focus,
+textarea:focus {
+}
+/*input[type=text],
+input[type=email] {
+	padding: 3px;
+}*/
+textarea {
+	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
+	padding-left: 3px;
+	vertical-align: top; /* Improves readability and alignment in all browsers */
+	width: 98%;
+}
+
+/* Links */
+a {
+	color: royalblue;
+}
+a:visited {
+	color: purple;
+}
+a:hover,
+a:focus,
+a:active {
+	color: midnightblue;
+}
+
+/* Alignment */
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+.aligncenter {
+	clear: both;
+	display: block;
+	margin: 0 auto;
+}
+
+/* Text meant only for screen readers */
+.assistive-text {
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+}
+
+
+.clear {
+clear: both;
+}
+
+/* =Menu
+----------------------------------------------- */
+
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+}
+.main-navigation ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+.main-navigation li {
+	float: left;
+	position: relative;
+}
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+.main-navigation ul ul {
+	-moz-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	box-shadow: 0 3px 3px rgba(0,0,0,0.2);
+	display: none;
+	float: left;
+	position: absolute;
+		top: 1.5em;
+		left: 0;
+	z-index: 99999;
+}
+.main-navigation ul ul ul {
+	left: 100%;
+	top: 0;
+}
+.main-navigation ul ul a {
+	width: 200px;
+}
+.main-navigation ul ul li {
+}
+.main-navigation li:hover > a {
+}
+.main-navigation ul ul :hover > a {
+}
+.main-navigation ul ul a:hover {
+}
+.main-navigation ul li:hover > ul {
+	display: block;
+}
+.main-navigation li.current_page_item a,
+.main-navigation li.current-menu-item a {
+}
+
+/* Small menu */
+.menu-toggle {
+	cursor: pointer;
+}
+.main-small-navigation .menu {
+	display: none;
+}
+
+
+/* =Content
+----------------------------------------------- */
+
+.sticky {
+}
+.hentry {
+	margin: 0 0 1.5em;
+}
+.entry-meta {
+	clear: both;
+}
+.byline {
+	display: none;
+}
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+
+/* =Asides
+----------------------------------------------- */
+
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
+
+
+/* =Media
+----------------------------------------------- */
+
+.site-header img,
+.entry-content img,
+.comment-content img,
+.widget img {
+	max-width: 100%; /* Fluid images for posts, comments, and widgets */
+}
+.site-header img,
+.entry-content img,
+img[class*="align"],
+img[class*="wp-image-"] {
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+.site-header img,
+.entry-content img,
+img.size-full {
+	max-width: 100%;
+	width: auto; /* Prevent stretching of full-size images with height and width attributes in IE8 */
+}
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+.wp-caption {
+	border: 1px solid #ccc;
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin: 1.2% auto 0;
+	max-width: 98%;
+}
+.wp-caption-text {
+	text-align: center;
+}
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+.site-content .gallery {
+	margin-bottom: 1.5em;
+}
+.gallery-caption {
+}
+.site-content .gallery a img {
+	border: none;
+	height: auto;
+	max-width: 90%;
+}
+.site-content .gallery dd {
+	margin: 0;
+}
+.site-content .gallery-columns-4 .gallery-item {
+}
+.site-content .gallery-columns-4 .gallery-item img {
+}
+
+/* Make sure embeds and iframes fit their containers */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+
+/* =Navigation
+----------------------------------------------- */
+
+.site-content .site-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+.site-content .nav-previous {
+	float: left;
+	width: 50%;
+}
+.site-content .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/* =Comments
+----------------------------------------------- */
+
+.bypostauthor {
+}
+
+/* =Widgets
+----------------------------------------------- */
+
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets */
+.widget select {
+	max-width: 100%;
+}
+
+/* Search widget */
+#searchsubmit {
+	display: none;
+}
+
+
+/* My css */
+
+
+
+
+body { 
+    font: normal 14px/16px 'OpenSansRegular', Arial, Helvetica, sans-serif; 
+	width:100%; height:100%;
+
+/*Fallback*/
+	-o-background-size: 100% auto, auto;
+	-moz-background-size: 100% auto, auto;
+	-webkit-background-size: 100% auto, auto;
+	background-size: 100% auto, auto;
+/*Most of browsers*/
+	-o-background-size: cover;
+	-moz-background-size: cover;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-image: url('images/background_2.jpg');
+	background-repeat:no-repeat;
+	background-position:top center;
+	background-attachment:fixed;
+}
+
+
+
+.global_container {
+    /* RGBa with 0.6 opacity */
+	background-color: #ccc;
+	/* For IE 8*/
+	/*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)"; */   
+    width:25%;
+    height: auto;
+    /* Firefox v1.0+ */
+    -moz-border-radius:10px ;
+    /* Safari v3.0+ and by Chrome v0.2+ */
+    -webkit-border-radius:10px ;
+    /* Firefox v4.0+ , Safari v5.0+ , Chrome v4.0+ , Opera v10.5+  and by IE v9.0+ */
+    border-radius:10px ;
+    overflow: hidden;
+    border:2px solid #fff;
+    position:relative;
+    margin-right:auto;
+    margin-left:auto;
+    
+}
+
+.global_container img{
+    padding: 30px;
+/*    margin-left: 46px;*/
+}
+
+.global_container_2 img {
+	float: left;
+	padding-right: 60px;
+	/*padding-left: 72px;*/
+}
+
+.text_container {
+    width: 520px;
+    text-align: left;
+    margin-top: 18px;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+
+.text_container_2{
+	width: 660px;
+	height: 230px;
+	padding-bottom: 36px;
+	text-align: left;
+    margin-top: 18px;
+    margin-left: 90px;
+    margin-right: 90px;
+}
+
+.title_subscribe_2 {
+	font-family:"OpenSansExtrabold";
+	font-size:24px;
+	letter-spacing:0pt;
+	line-height:120%;
+	color:rgb(242,242,242);
+	text-align:left;
+	margin-bottom: 0;
+	padding-top: 36px;
+}
+
+.text_subscribe_2 {
+	font-family:"OpenSansRegular";
+	font-size:14px;
+	letter-spacing:0pt;
+	line-height:18px;
+	color:rgb(153,153,153);
+	text-align:left;
+}
+
+h1 {
+    font-family:"OpenSansExtrabold";
+    font-size:48px;
+    letter-spacing:-1pt;
+    line-height:120%;
+    color:rgb(242,242,242);
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-family:"OpenSansBold";
+    font-size:28px;
+    line-height:24px;
+    color:rgb(242,242,242);
+}
+
+h3 {
+	color:#fff;
+	font-family: 'BevanRegular';
+	font-size:18px;
+	line-height:26px;
+}
+
+p {
+	padding:5px 20px 5px 20px;	
+    margin-top: 12px;
+    font-family:"OpenSansRegular";
+    font-size:16px;
+    line-height:22px;
+    letter-spacing:0pt;
+    text-align:left;
+}
+
+.small{
+	font-size:12px;
+	line-height:18px;
+	color:#fff;
+}
+
+#email, .wysija-email {
+    background-color:rgb(179,179,179);
+    width:368px;
+    height:34px;
+    /* Firefox v3.5+ */
+    -moz-box-shadow:inset 3px 3px 7px rgba(0,0,0,0.35);
+    /* Safari v3.0+ and by Chrome v0.2+ */
+    -webkit-box-shadow:inset 3px 3px 7px rgba(0,0,0,0.35);
+    /* Firefox v4.0+ , Safari v5.1+ , Chrome v10.0+, IE v10+ and by Opera v10.5+ */
+    box-shadow:inset 3px 3px 7px rgba(0,0,0,0.35);
+    border:none;
+    font-family:"OpenSansLight";
+    padding-left: 10px;
+    font-size:24px;
+    line-height:120%;
+    color:rgb(77,77,77);
+    text-align:left;
+    padding: 8px 0 8px 16px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    float: left;
+}
+
+
+#email_2 {
+	width: 236px;
+	background-color:rgb(179,179,179);
+    height:24px;
+    /* Firefox v3.5+ */
+    -moz-box-shadow:inset 3px 3px 7px rgba(0,0,0,0.35);
+    /* Safari v3.0+ and by Chrome v0.2+ */
+    -webkit-box-shadow:inset 3px 3px 7px rgba(0,0,0,0.35);
+    /* Firefox v4.0+ , Safari v5.1+ , Chrome v10.0+, IE v10+ and by Opera v10.5+ */
+    box-shadow:inset 3px 3px 7px rgba(0,0,0,0.35);
+    border:none;
+    font-family:"OpenSansLight";
+    padding-left: 10px;
+    font-size:18px;
+    line-height:120%;
+    color:rgb(77,77,77);
+    text-align:left;
+    padding: 2px 0 2px 16px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    float: left;
+}
+
+#submit_email_2 {
+	padding: 0px 12px 2px 12px;
+background-color:rgb(54,191,166);
+width: 100px;
+text-align: center;
+height:27px;
+/* Firefox v3.5+ */
+-moz-box-shadow:5px 5px 4px rgba(0,0,0,0.2);
+/* Safari v3.0+ and by Chrome v0.2+ */
+-webkit-box-shadow:5px 5px 4px rgba(0,0,0,0.2);
+/* Firefox v4.0+ , Safari v5.1+ , Chrome v10.0+, IE v10+ and by Opera v10.5+ */
+box-shadow:5px 5px 4px rgba(0,0,0,0.2);
+-ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=5,OffY=5,Color=#33000000,Positive=true)";
+filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=5,OffY=5,Color=#33000000,Positive=true);
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+border-radius: 2px;    
+border:none;
+font-family:"OpenSansRegular";
+font-size:16px;
+color:rgb(255,255,255);
+cursor:pointer;
+margin: 1px 0 0 10px;
+    transition: all 0.2s;
+    -moz-transition: all 0.2s; /* Firefox 4 */
+    -webkit-transition: all 0.2s; /* Safari and Chrome */
+    -o-transition: all 0.2s; /* Opera */
+text-shadow: none;
+}
+
+#submit_email_2:hover{
+    box-shadow: none;
+    -moz-box-shadow:5px 5px 4px rgba(0,0,0,0.2);
+    -webkit-box-shadow:5px 5px 4px rgba(0,0,0,0.2);
+    background-color: rgb(82,148,143);
+}
+
+#email_2::-webkit-input-placeholder {
+    font-family:"OpenSansLight";
+    font-size:18px;
+    line-height:120%;
+    color:rgb(77,77,77);
+}
+
+::-webkit-input-placeholder {
+    font-family:"OpenSansLight";
+    font-size:18px;
+    line-height:120%;
+    color:rgb(77,77,77);
+}
+
+#email_2:-moz-placeholder {
+    font-family:"OpenSansLight";
+    font-size:18px;
+    line-height:120%;
+    color:rgb(77,77,77);
+}
+
+:-moz-placeholder {
+    font-family:"OpenSansLight";
+    font-size:18px;
+    line-height:120%;
+    color:rgb(77,77,77);
+}
+
+#email_2:-ms-input-placeholder {
+    font-family:"OpenSansLight";
+    font-size:18px;
+    line-height:120%;
+    color:rgb(77,77,77);
+}
+
+:-ms-input-placeholder {
+    font-family:"OpenSansLight";
+    font-size:18px;
+    line-height:120%;
+    color:rgb(77,77,77);
+}
+
+
+
+.form {
+    margin-top: 46px;
+}
+
+
+#submit_email, .wysija-submit {
+padding: 0 12px 6px 12px;
+background-color:rgb(54,191,166);
+width:auto;
+height:48px;
+/* Firefox v3.5+ */
+-moz-box-shadow:5px 5px 4px rgba(0,0,0,0.2);
+/* Safari v3.0+ and by Chrome v0.2+ */
+-webkit-box-shadow:5px 5px 4px rgba(0,0,0,0.2);
+/* Firefox v4.0+ , Safari v5.1+ , Chrome v10.0+, IE v10+ and by Opera v10.5+ */
+box-shadow:5px 5px 4px rgba(0,0,0,0.2);
+-ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=5,OffY=5,Color=#33000000,Positive=true)";
+filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=5,OffY=5,Color=#33000000,Positive=true);
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+border-radius: 2px;    
+border:none;
+font-family:"OpenSansLight";
+font-size:24px;
+color:rgb(255,255,255);
+cursor:pointer;
+margin: 1px 0 0 10px;
+    transition: all 0.2s;
+    -moz-transition: all 0.2s; /* Firefox 4 */
+    -webkit-transition: all 0.2s; /* Safari and Chrome */
+    -o-transition: all 0.2s; /* Opera */
+text-shadow: none;
+}
+
+.submit2 {
+	width: 120px;
+}
+
+.wysija-submit{
+	
+	position:relative;
+	left:15px;
+}
+
+#submit_email:hover, .wysija-submit:hover{
+    box-shadow: none;
+    -moz-box-shadow:5px 5px 4px rgba(0,0,0,0.2);
+    -webkit-box-shadow:5px 5px 4px rgba(0,0,0,0.2);
+    background-color: rgb(82,148,143);
+}
+
+.widget_wysija_cont .form-valid-sub input.defaultlabels {
+	color: rgb(77,77,77);
+	text-transform:lowercase;
+	
+}
+
+#error_msg {
+	height: 0;
+	background: none;
+	border: none;
+	color: #F27052;
+	font-family:"OpenSansRegular";
+	font-size: 16px;
+	position: relative;
+	width: 100%;
+	z-index: 5001;
+}
+
+
+.formError .formErrorContent{
+	background: none;
+	border: none;
+	color: #F27052;
+	font-family:"OpenSansRegular";
+	font-size: 16px;
+	padding: 4px 10px;
+	position: relative;
+	width: 100%;
+	z-index: 5001;
+	bottom: 30px;
+}
+
+.updated, .error, .xdetailed-errors {
+	border:none !important;
+	font-family: 'OpenSansRegular' !important;
+}
+
+.error, .xdetailed-errors {
+	background: #F27052 !important;
+}
+
+.updated {
+	background: #F2D9B0 !important;
+	padding-left: 36px !important;
+}
+
+
+
+.footer {
+   	padding:0 0 0 72px;
+    margin-top: 42px;
+    height: 100px;
+	margin-bottom: 24px;
+}
+
+.support {
+    float:left;
+    margin-right: 30px;
+}
+
+.support p{
+    font-family:"OpenSansRegular";
+    font-size:14px;
+    line-height:120%;
+    color:#fff;
+    text-align:left;
+    margin-bottom: 6px;
+}
+
+.social_text {
+	padding-top: 12px;
+}
+
+
+.support img {
+    padding: 0;
+}
+
+.logo {
+    opacity: 0.4;
+    min-width: 220px;
+    clear: both;
+
+    transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s; /* Firefox 4 */
+    -webkit-transition: opacity 0.5s; /* Safari and Chrome */
+    -o-transition: opacity 0.5s; /* Opera */
+}
+
+.logo:hover {
+    opacity: 1.0;
+}
+
+.logo img{
+    float: left;
+    margin-right: 15px;
+    margin-left: 0;
+}
+
+.facebook_btn, .mail_btn {
+    height: 36px;
+}
+
+.spain_btn {
+    height: 100px;
+}
+
+}
+::selection {
+	background: rgb(54,191,166);
+	color: rgb(54,191,166);
+}
+
+
+#colophon {
+	background: rgba(0,0,0,0.5);
+	padding: 5px 0;
+	color: #adadad;
+}
+
+/* Select Box */
+
+/*
+
+.language_opt{
+	float: right;
+	margin: 30px 0 0 0;
+	font-family: 'OpenSansLight';
+	opacity: 0.7;
+}
+
+.language_opt select {
+	font-size: 18px;
+	background-color: rgb(100,100,100);
+	color: black;
+	-webkit-appearance:none;
+	-moz-appearance: none;  
+	-o-appearance: none;  
+	-ms-appearance: none;  
+	appearance:  
+	border:none;
+	cursor:pointer;
+	padding-right: 20px;
+
+.language_opt select:hover {
+	background-color: rgb(130,130,130);
+}
+
+.languange_sing {
+	background: rgb(146,146,146);
+	border:none;
+	outline: none;
+}
+
+
+#lang_sel {
+	float: right;
+	padding: 36px 0;
+	font-family: 'OpenSansLight';
+	border:none;
+}
+
+
+#lang_sel a.lang_sel_sel, #lang_sel a.lang_sel_sel:visited {
+	background: rgba(0,0,0,0.5) !important;
+	margin: 0;
+	color: white !important;
+	border-color: rgba(0,0,0,0) !important;
+}
+
+#lang_sel li ul a, #lang_sel li ul a:link, #lang_sel li ul a:visited{
+	background-color: rgba(50,50,50,0.5) !important;
+	border:none;
+	color: white!important;
+}
+
+#lang_sel li ul a:hover {
+	background: rgba(100,100,100,0.5) !important;
+	color: white !important;
+}
+
+#lang_sel ul ul {
+	border-top: none !important;
+}
+
+#lang_sel li{
+	width: 100px;
+}
+
+#lang_sel a{
+	font-size: 14px;
+	padding: 2px 0;
+}
+
+a.lang_sel_sel{
+	border:none;
+}*/
+
+
+/* Competition Form */
+
+/*.competition_form_completed {
+	display:none;
+}*/
+
+.competition_form_register {
+	/*display: block;*/
+	display: none;
+}
+
+.competition_form_landing {
+	/*display:none;*/
+	display:block;
+}
+
+.competition_form_landing, .competition_form_register, .competition_form_completed {
+	width: 100%;
+	text-align: center;
+}
+
+.competition_form_landing h1, .competition_form_register h1, .competition_form_completed h1{
+	font-family: 'BevanRegular';
+	font-size: 72px;
+	line-height: 100%;
+	color: rgb(51,191,165);
+	text-transform: uppercase;
+	margin-bottom: 0;
+	margin-top: 6px;
+}
+
+.competition_form_landing h4, .competition_form_register h4 {
+	font-family:'ArvoBold';
+	font-size:18px;
+	color:rgb(54,191,166);
+	margin-bottom: 6px;
+}
+
+.competition_form_landing  h2, .competition_form_completed h2{
+	font-family: 'ArvoRegular';
+	font-size:24px;
+	line-height:30px;
+	color:rgb(230,230,230);
+	text-align:center;
+	width: 465px;
+	margin: 30px auto 6px auto;
+}
+
+
+
+
+.marker{
+	margin: 0 auto;	
+	background-image: url(images/marker.png);
+	height: 7px;
+	width: 364px;
+}
+
+
+
+.button_container_register {
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 42px;
+}
+
+.button_container_register #competition_compete {
+	float: left;
+	margin: 0 auto;
+	max-width: 200px;
+}
+
+#competition_compete {
+	float:left;
+	background-color:rgb(242,112,82);
+	width:auto;
+	height:auto; /* Firefox v1.0+ */
+	-moz-border-radius:3px ; /* Safari v3.0+ and by Chrome v0.2+ */
+	-webkit-border-radius:3px ; /* Firefox v4.0+ , Safari v5.0+ , Chrome v4.0+ , Opera v10.5+  and by IE v9.0+ */
+	border-radius:3px ;
+	text-transform: capitalize;
+	transition: all 0.2s;
+    -moz-transition: all 0.2s; /* Firefox 4 */
+    -webkit-transition: all 0.2s; /* Safari and Chrome */
+    -o-transition: all 0.2s; /* Opera */
+
+
+	padding: 8px 16px 12px 16px;
+	box-shadow: inset -3px -3px 20px -5px;
+	-moz-box-shadow: inset -3px -3px 20px -5px;
+  	-webkit-box-shadow: inset -3px -3px 20px -5px;
+}
+
+#competition_compete:hover {
+	box-shadow: none;
+	-moz-box-shadow: none;
+  	-webkit-box-shadow: none;
+}
+
+
+
+#competition_compete a p{
+	font-family:'BevanRegular';
+	font-size:30px;
+	line-height:18px;
+	color:rgb(255,255,255);
+	text-align: center;
+	margin-bottom: 0;
+}
+
+#competition_compete a p.microcopy{
+	font-family:'ArvoRegular';
+	font-size:16px;
+	line-height:14px;
+	color:rgb(255,255,255);
+}
+
+#competition_info, #competition_back {
+	float: left;
+	background-color:rgb(153,153,153);
+	height:auto; /* Firefox v1.0+ */
+	-moz-border-radius:3px ; /* Safari v3.0+ and by Chrome v0.2+ */
+	-webkit-border-radius:3px ; /* Firefox v4.0+ , Safari v5.0+ , Chrome v4.0+ , Opera v10.5+  and by IE v9.0+ */
+	border-radius:3px ;
+	text-transform: capitalize;
+	margin-left: 10px;
+	transition: all 0.2s;
+    -moz-transition: all 0.2s; /* Firefox 4 */
+    -webkit-transition: all 0.2s; /* Safari and Chrome */
+    -o-transition: all 0.2s; /* Opera */
+
+	
+	padding: 6px 16px 10px 16px;
+	box-shadow: inset -3px -3px 20px -5px;
+	-moz-box-shadow: inset -3px -3px 20px -5px;
+  	-webkit-box-shadow: inset -3px -3px 20px -5px;
+}
+
+#competition_back {
+	margin-right: 10px;
+}
+
+#competition_back {
+	height: 60px;
+	padding: 16px 16px 0px 16px;
+}
+
+#competition_info:hover, #competition_back:hover {
+	box-shadow: none;
+	-moz-box-shadow: none;
+  	-webkit-box-shadow: none;
+}
+
+#competition_info p, #competition_back p{
+	font-family:'ArvoRegular';
+	font-size:14px;
+	line-height:16px;
+	color:rgb(26,26,26);
+	text-align:center;
+	width: 60px;
+	margin-bottom: 2px;
+	margin-top: 6px;
+}
+
+.competition_back_button {
+	margin: 0 auto;	
+	background-image: url(images/back.png);
+	background-repeat: no-repeat;
+	height: 18px;
+	width: 10px;
+}
+
+.download_info{
+	margin: 0 auto;	
+	background-image: url(images/download.png);
+	height: 20px;
+	width: 33px;
+}
+
+
+/* Form */
+
+.form_container {
+	overflow:hidden;
+	clear:both;
+	width: 620px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+
+.form_container div.error{
+	background: none !important;
+	color: #F27052;
+	margin-bottom: 12px;
+}
+
+.first_row {
+	float: left;
+	padding-right: 70px;
+	width: 250px;
+}
+.second_row {
+	width: 295px;
+	float:left;
+}
+
+.first_row input{
+	margin-bottom: 12px;
+	width: 250px;
+}
+
+.form_container input {
+	background-color:rgb(179,179,179) !important;
+	float: left;
+}
+.second_row label {
+	font-family: 'OpenSansExtrabold';
+	color: white;
+	background: #333333;
+	font-size: 18px;
+	/*padding: 8px 10px;*/
+	float: left;
+	line-height: 30px;
+	width: 30px;
+} 
+
+.second_row input {
+	margin-bottom: 12px;
+	width: 250px;
+}
+
+.formfield {
+	background-color: rgb(179,179,179);
+	-moz-box-shadow: inset 3px 3px 7px rgba(0,0,0,0.35);
+	-webkit-box-shadow: inset 3px 3px 7px rgba(0,0,0,0.35);
+	box-shadow: inset 3px 3px 7px rgba(0,0,0,0.35);
+	border: none;
+	font-family: "OpenSansLight";
+	font-size: 18px;
+	color: rgb(77,77,77);
+	text-align: left;
+	padding: 0px 0 0px 10px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	height: 30px;
+}
+
+
+
+/* Landing Page Phase 2 */
+.competition_slider {
+	height: 350px;
+}
+.competition_form_landing {
+}
+.competition_form_register {
+	margin-left: 800px;
+	margin-top: -430px;
+	display: block;
+}
+.competition_form_completed {
+	margin-left: 1600px;
+	margin-top: -430px;
+	display: block;
+}
+
+.video-viewport {
+	position: fixed;
+	top: 0;
+	overflow: hidden;
+	z-index: -1;
+}
+

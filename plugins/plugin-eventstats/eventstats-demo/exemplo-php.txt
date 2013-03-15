@@ -1,0 +1,12 @@
+$url = get_bloginfo('wpurl').'/wp-admin/admin-ajax.php';
+			
+$req = wp_remote_post($url, array(
+		'blocking' => 'false',
+		'timeout' => '0.01',
+		'body' => array(
+				'action' => 'fetch_first_result',
+				'campaign_id' => $campaign->campaign_id,
+				'campaign_domain' => $campaign->campaign_url,
+				'keyword' => $keyword->keyword
+		)
+));

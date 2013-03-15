@@ -1,0 +1,112 @@
+// the general layout of the page is defined here.
+// you can either dump all your styles here, or divide them in smaller files like _header.scss, _footer.scss
+
+.subscription-wrapper {
+	width: 100%;
+	background-image: url(images/background-subscription.png);
+	@include box-shadow (inset $grey 0rem 0rem 2rem);
+}
+
+.subscription-container, .subscription-container-form, .subscription-container-notice {
+		@include container;
+		text-align: center;
+		@include padding-pair (30,42);
+	h1 {
+		@include font-size (54);
+		color: $darkwhite;
+		font-family: $f-light;
+		@include padding-pair (12, 60);
+		@include line-height (60);
+	}
+	h2 {
+		@include font-size (24);
+		@include margin-bottom (24);
+	}
+	button {
+		@include border-radius (4px);
+		@include margin-pair (10,10);
+		border: none;
+		color: $darkwhite;
+		@include padding-pair (18,18);
+		font-family: $f-bold;
+		@include font-size (24);
+		@include box-shadow ($grey 0px 0px 14px) ;
+		@include transition-property (box-shadow);
+		@include transition-duration (0.3s);
+		&:hover{
+			@include box-shadow ($mediumgrey 0px 0px 14px);
+		}
+	}
+}
+
+.subscription-container-form, .subscription-container-notice {
+	display:none;
+}
+
+.submit-button-container {
+	@include margin-top (42);
+}
+
+.skills-form {
+	input {
+	@include width (230);
+	}
+}
+
+.subscribe-button, .submit-button {
+	background-color: $red;
+}
+.facebook-button {
+	background-color: $facebookblue;
+}
+
+/* Form Sections */
+
+.subscription-container-form{
+	/*display: none;*/
+	form {
+		text-align: right;
+		@include padding-pair (12,0);
+		overflow: hidden;
+	}
+	input {
+		outline: 0;
+		@include margin-pair (0, 12);
+		@include font-size (18);
+		@include padding-pair (6,6);
+		@include border-radius (3px);
+		background: $darkwhite;
+		font-family: $f-regular;
+		border:none;
+		&:active {
+			@include box-shadow ($lightgrey 0px 0px 8px);
+		}
+		&:focus {
+			@include box-shadow ($lightgrey 0px 0px 8px);
+		}
+	}
+}
+
+
+.form-section {
+	@include span-columns(4, 12);
+	@include pre(1);
+}
+
+.form-group {
+	@include margin-pair (18, 0);
+	label {
+		@include font-size (18);
+		font-family: $f-regular;
+		color: $darkwhite;
+	}
+}
+
+.location-form {
+	input {
+		@include width (80);
+	}
+}
+
+
+

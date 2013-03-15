@@ -1,0 +1,96 @@
+ // the modules directory is where you can add classes for the parts of your layout, like widgets, 
+// This is where the singles will be stylized
+
+
+.single-contest-container, .single-job-container {
+
+	.single-image-container {
+		@include span-columns (8,12);
+	}
+
+	.single-info {
+		@include span-columns (4 omega, 12);
+	}
+
+	.single-description {
+		@include span-columns (8,12);
+	}
+}
+
+.single-contest-container {
+	h1 {
+		font-family: $f-black;
+		color: $grey;
+		@include font-size (24);
+		@include margin-bottom (30);
+	}
+}
+
+.single-userinfo {
+	@include padding-bottom (12);
+
+	img {
+		@extend %float-left;
+		@include padding-right (12);
+	}
+
+	p {
+		color: $mediumgrey;
+		clear: none;
+		@include margin-bottom (10);
+		@include font-size (16);
+		@include line-height (18);
+	}
+
+	a {
+		color: $darkgrey;
+		&:hover {
+			color: $grey;
+		}
+	}
+}
+
+.single-description {
+	text-align: center;
+
+	p{
+	@include padding-top (24);
+	@include padding-bottom (0);
+	font-family: $f-regular;
+	text-align: left;
+	@include font-size (16);
+	@include line-height (24);
+	clear: both;
+	}
+}
+
+.single-details  {
+	@include padding-bottom (12);
+	@include margin-top (12);
+
+	h1 {
+		@include font-size (18);
+		font-family: $f-black;
+		@include margin-bottom (12);
+	}
+
+	span {
+		font-family: $f-regular;
+	}
+}
+
+.single-info {
+	button {
+		width: 70%;
+		background: $blue;
+		color: $white;
+		@include box-shadow (inset $grey 0px -6px 13px);
+
+		@include transition-property (all);
+		@include transition-duration (0.2s);
+
+		&:hover {
+			@include box-shadow (inset $menugrey 0px 6px 13px);
+		}
+	}
+}

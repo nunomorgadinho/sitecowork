@@ -1,0 +1,3 @@
+d:
+cd \xampp\htdocs\rec\wp-content\scss\rec
+compass watch

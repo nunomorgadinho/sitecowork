@@ -1,0 +1,16 @@
+# de envios do 1º email por dia
+	PHP POST depois do wp_mail
+
+# de envios do 2º email por dia
+	PHP POST depois do wp_mail
+
+# de respostas ao Quiz por dia
+	Javascript POST quando a pessoa chega ao fim do Quiz
+	ou PHP POST depois de dos dados serem guardados?
+
+# de partilha de cada um dos PopyStyles por dia
+	Javascript POST quando a pessoa faz a partilha
+
+# de cada um dos popystyles atribuídos por dia
+	Javascript POST quando a pessoa recebe o seu popystyle
+

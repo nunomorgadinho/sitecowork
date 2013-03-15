@@ -1,0 +1,43 @@
+// the modules directory is where you can add classes for the parts of your layout, like widgets, 
+
+.widget {
+	@include margin (0,0,0,0);
+}
+
+.search-element-footer {
+
+	input {
+		color: $lightgrey;
+		@include border-radius(0px, 0px);
+		background-color: transparent;
+		@include line-height (28);
+		@include padding (0,22,0,10);
+		outline: 0;
+		@include box-shadow (inset $grey 3px 3px 3px);
+				
+				border: {
+		    		style: solid;
+		    		width: 1px;
+				    right: {
+				      color: $mediumgrey;
+				    }
+				    bottom: {
+				      color: $mediumgrey;
+				    }
+				    left: {
+				    	color: transparent;
+				    }
+				    top: {
+				    	color: transparent;
+				    }
+  					}
+	}
+}
+
+input.field {
+	background-image: url(images/search-icon.png);
+	background-repeat: no-repeat;
+	background-position: 96% center;
+}
+
+

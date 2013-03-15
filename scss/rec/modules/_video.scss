@@ -1,0 +1,36 @@
+ // the modules directory is where you can add classes for the parts of your layout, like widgets, 
+// This is where the video will be stylized
+
+
+.video-wrapper {
+	@include span-columns (9,12);
+	background: ($tilegrey);
+	@include box-shadow (#dcdcdc 3px 2px 2px) ;
+}
+
+.video-display {
+	width: 100%;
+}
+
+.video-meta {
+	@include padding-pair (18,24);
+	@extend %clearfix;
+
+	h1 {
+		font-family: $f-black;
+		@include font-size (30);
+		@include line-height (36);
+		color: $grey;
+		border-bottom: solid 1px $grey;
+		@include padding-bottom (12);
+		@include height (72);	
+	}
+
+	p {
+		width: 85%;
+		@extend %float-left;
+		@include font-size (14);
+		color: $mediumgrey;
+		@include line-height (20);
+	}
+}

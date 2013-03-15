@@ -1,0 +1,13 @@
+
+
+.global_container {
+    
+/* For IE 8*/
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#d9000000, endColorstr=#d9000000)";   
+    
+}
+
+
+#colophon {
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#80000000, endColorstr=#80000000)"; 
+}
