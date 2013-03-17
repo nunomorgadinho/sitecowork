@@ -20,10 +20,27 @@
 	        
 	        <ul>
 	        	<li>
-	        		<?php _e('choose workplace','cowork');?>
+	        
+	        	<select data-placeholder="choose workplace" name="workplace" id="workplace" class="chzn-select" style="width:250px;" >
+			      <option value="all">LX Factory</option>
+			      <option value="classic">Central Station</option>
+			      <option value="modern">Palácio</option>
+			      <option value="sport"> Nomad (all locations)</option>
+    			</select>
+	        		
+	        	
+	        		
 	        	</li>
 	        	<li>
-	        		<?php _e('choose plan','cowork');?>
+		        	<select data-placeholder="<?php _e('choose plan','cowork');?>" name="plan" id="plan" class="chzn-select" style="width:250px;">
+				      <option value="all">Month Fixed Desk (M €120 / L €145) +iva</option>
+				      <option value="classic">HUB x3 / x4 (ask!)</option>
+				      <option value="modern">Month Flex Desk (€99) iva_inc</option>
+				      <option value="sport"> Week Flex Desk (€39) iva_inc</option>
+				      <option value="">Day Pass (€10) iva_inc</option>
+				      <option value="">Nomad No Desk (€39) iva_inc</option>
+	    			</select>
+	        		
 	        	</li>
 	        	<li>
 	        		<?php _e('choose desk','cowork');?>

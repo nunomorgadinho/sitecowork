@@ -263,4 +263,9 @@ jQuery(document).ready(function($) {
 		return ! ( value == $(params.elements[0]).val() || value == $(params.elements[1]).val() )
 	}, jQuery.format( "URLs cannot be equal.") );
 
+	
+	console.log(jQuery(".chzn-select")); 
+	
+	jQuery(".chzn-select").chosen({disable_search:true, disable_search_threshold: 5});
+	
 });

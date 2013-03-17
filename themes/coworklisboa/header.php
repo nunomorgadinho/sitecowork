@@ -7,7 +7,7 @@
  * @package Rec
  * @since Rec 1.0
  */
-set_language();
+//set_language();
 
 ?>
 <!DOCTYPE html>
