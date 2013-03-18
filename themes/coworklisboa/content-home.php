@@ -9,6 +9,7 @@
 
 
   
+
     
     <div class="competition_slider">
 
@@ -18,7 +19,7 @@
 	        <h1 class="general-title"><?php _e('Add a life to your work today:','cowork')?></h3>
 	        
 	        
-	        <ul>
+	        <ul class="multiple-selects">
 	        	<li>
 	        
 	        	<select data-placeholder="choose workplace" name="workplace" id="workplace" class="chzn-select" style="width:250px;" >
@@ -41,12 +42,16 @@
 				      <option value="">Nomad No Desk (€39) iva_inc</option>
 	    			</select>
 	        		
+      	</li>
+	        	<li>
+	        		<select>
+	        			<option><?php _e('choose desk','cowork');?></option>
+	        		</select>
 	        	</li>
 	        	<li>
-	        		<?php _e('choose desk','cowork');?>
-	        	</li>
-	        	<li>
-	        		<?php _e('choose life','cowork');?>
+	        		<select>
+	        			<option><?php _e('choose life','cowork');?></option>
+	        		</select>
 	        	</li>
 	        </ul>
 	    

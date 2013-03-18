@@ -7,6 +7,10 @@ Template Name: HomePage
 
 		<div id="primary" class="content-area">
 			<div id="content" class="site-content" role="main">
+
+				<div class="global_container grey-fill">
+					<a href="#"><?php _e('Want to know all the residents?','rec'); ?></a>
+		    	</div>
 			
 			<div class="global_container">
 			
@@ -25,6 +29,10 @@ Template Name: HomePage
 				
 				
 			</div>	
+
+			<div class="global_container red-fill">
+					<a href="#"><?php _e('This wallpaper can be yours','rec'); ?></a>
+		    </div>
 
 			</div><!-- #content .site-content -->
 		</div><!-- #primary .content-area -->

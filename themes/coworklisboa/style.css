@@ -138,8 +138,8 @@ p.navigate{
 }
 
 
-a.navigate-link:active, a.navigate-link:visited{
-	color: #ff0000;
+a.navigate-link:active, a.navigate-link:visited, a.navigate-link:link{
+	color: #ed1f24;
 	font-family: 'estilo_textbold';
 	font-size: 18px;
 }
@@ -164,6 +164,12 @@ select {
 	background-color: none;
 	outline: none;
 	border: none;
+}
+
+.multiple-selects select {
+	-webkit-appearance: none;
+	background: transparent;
+	cursor: pointer;
 }
 
 /* Headings */
@@ -736,15 +742,40 @@ body {
     height: auto;
     max-height: 360px;
     /* Firefox v1.0+ */
-    -moz-border-radius:5% ;
+    -moz-border-radius:30px ;
     /* Safari v3.0+ and by Chrome v0.2+ */
-    -webkit-border-radius:5% ;
+    -webkit-border-radius:30px ;
     /* Firefox v4.0+ , Safari v5.0+ , Chrome v4.0+ , Opera v10.5+  and by IE v9.0+ */
-    border-radius:5% ;
+    border-radius:30px ;
     overflow: hidden;
     border:3px solid #fff;
     margin: 0 auto;
-    padding: 25px;    
+    padding: 15px 25px;
+    margin-bottom: 20px;    
+}
+
+.red-fill {
+	text-align: center;
+	background: #ed1f24;
+	color: white;
+}
+
+.red-fill a {
+	color: white;
+	font-family: 'estilo_textbold';
+	font-size: 20px;
+}
+
+.grey-fill {
+	text-align: center;
+	background: #231f20;
+	color: white;
+}
+
+.grey-fill a{
+	color: #a7a9ac;
+	font-family: 'estilo_textbold';
+	font-size: 20px;
 }
 
 .logo_container {
