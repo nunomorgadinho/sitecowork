@@ -9,6 +9,7 @@
 
 
   
+
     
     <div class="competition_slider">
 
@@ -18,18 +19,26 @@
 	        <h1 class="general-title"><?php _e('Add a life to your work today:','cowork')?></h3>
 	        
 	        
-	        <ul>
+	        <ul class="multiple-selects">
 	        	<li>
-	        		<?php _e('choose workplace','cowork');?>
+	        		<select>
+	        			<option><?php _e('choose workplace','cowork');?></option>
+	        		</select>
 	        	</li>
 	        	<li>
-	        		<?php _e('choose plan','cowork');?>
+	        		<select>
+	        			<option><?php _e('choose plan','cowork');?></option>
+	        		</select>
 	        	</li>
 	        	<li>
-	        		<?php _e('choose desk','cowork');?>
+	        		<select>
+	        			<option><?php _e('choose desk','cowork');?></option>
+	        		</select>
 	        	</li>
 	        	<li>
-	        		<?php _e('choose life','cowork');?>
+	        		<select>
+	        			<option><?php _e('choose life','cowork');?></option>
+	        		</select>
 	        	</li>
 	        </ul>
 	    
