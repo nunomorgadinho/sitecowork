@@ -11,12 +11,12 @@
 
 	</div><!-- #main .site-main -->
 
-	<center><footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<?php do_action( 'rec_credits' ); ?>
 			&copy <?php echo date('Y'); ?> <?php _e('CoworkLisboa','cowork');?>
 		</div><!-- .site-info -->
-	</footer></center><!-- #colophon .site-footer -->
+	</footer><!-- #colophon .site-footer -->
 </div><!-- #page .hfeed .site -->
 
 

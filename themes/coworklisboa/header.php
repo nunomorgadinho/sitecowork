@@ -47,6 +47,12 @@
 			<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'rec' ); ?>"><?php _e( 'Skip to content', 'rec' ); ?></a></div>
 
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			
+
+				<ul class="social-links">
+					<li><a href="#"><?php _e('Facebook','rec'); ?></a></li>
+					<li><a href="#"><?php _e('Twitter','rec'); ?></a></li>
+				</ul>
 		</nav><!-- .site-navigation .main-navigation -->
 	</header><!-- #masthead .site-header -->
 

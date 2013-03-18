@@ -135,13 +135,24 @@ a img {
 
 p.navigate{
 	text-align: right;
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 0;
+	right: 20px;
 }
 
 
 a.navigate-link:active, a.navigate-link:visited, a.navigate-link:link{
-	color: #ed1f24;
 	font-family: 'estilo_textbold';
 	font-size: 18px;
+}
+
+a.red, a.red:visited, a.red:hover {
+	color: #ed1f24;
+}
+
+a.green, a.green:visited, a.green:hover {
+	color: #b1bc22;
 }
 
 /* =Global
@@ -158,18 +169,27 @@ textarea {
 	line-height: 1.5;
 }
 
-select {
+select, input {
 	font-family: 'estilo_textregular';
-	font-size: 16px;
+	font-size: 19px;
 	background-color: none;
+	background: none;
 	outline: none;
 	border: none;
+	display: block;
 }
 
 .multiple-selects select {
 	-webkit-appearance: none;
 	background: transparent;
 	cursor: pointer;
+}
+
+.multiple-selects input {
+	line-height: 24px;
+	font-size: 19px;
+	width: 100%;
+	margin-bottom: 10px;
 }
 
 /* Headings */
@@ -363,10 +383,6 @@ input[type=text]:focus,
 input[type=email]:focus,
 textarea:focus {
 }
-/*input[type=text],
-input[type=email] {
-	padding: 3px;
-}*/
 textarea {
 	overflow: auto; /* Removes default vertical scrollbar in IE6/7/8/9 */
 	padding-left: 3px;
@@ -376,6 +392,11 @@ textarea {
 
 .general-title {
 	margin-bottom: 36px;
+	font-size: 22px;
+}
+
+h2.general-title {
+	color: #231f20;
 	font-size: 22px;
 }
 
@@ -418,7 +439,17 @@ a:active {
 
 
 .clear {
-clear: both;
+ // For IE 6/7 (trigger hasLayout)
+  zoom: 1;
+  //For modern browsers
+  &:before,
+  &:after {
+      content: "";
+      display: table;
+  }
+  &:after {
+      clear: both;
+  }
 }
 
 /* =Menu
@@ -555,6 +586,23 @@ clear: both;
 }
 .main-small-navigation .menu {
 	display: none;
+}
+
+#main {
+	min-height: 800px;
+
+
+	 // For IE 6/7 (trigger hasLayout)
+  zoom: 1;
+  //For modern browsers
+  &:before,
+  &:after {
+      content: "";
+      display: table;
+  }
+  &:after {
+      clear: both;
+  }
 }
 
 
@@ -712,7 +760,7 @@ object {
 
 
 body { 
-    font: normal 14px/16px 'OpenSansRegular', Arial, Helvetica, sans-serif; 
+    font: normal 14px/16px 'estilo_textregular', Arial, Helvetica, sans-serif; 
 	width:100%; height:100%;
 
 /*Fallback*/
@@ -740,18 +788,18 @@ body {
 	/*-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)"; */   
     width:260px;
     height: auto;
-    max-height: 360px;
     /* Firefox v1.0+ */
     -moz-border-radius:30px ;
     /* Safari v3.0+ and by Chrome v0.2+ */
     -webkit-border-radius:30px ;
     /* Firefox v4.0+ , Safari v5.0+ , Chrome v4.0+ , Opera v10.5+  and by IE v9.0+ */
     border-radius:30px ;
-    overflow: hidden;
+    /*overflow: hidden;*/
     border:3px solid #fff;
     margin: 0 auto;
     padding: 15px 25px;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
+    overflow-y: visible;    
 }
 
 .red-fill {
@@ -794,44 +842,6 @@ body {
 	/*padding-left: 72px;*/
 }
 
-.text_container {
-    width: 520px;
-    text-align: left;
-    margin-top: 18px;
-    margin-left: 90px;
-    margin-right: 90px;
-}
-
-.text_container_2{
-	width: 660px;
-	height: 230px;
-	padding-bottom: 36px;
-	text-align: left;
-    margin-top: 18px;
-    margin-left: 90px;
-    margin-right: 90px;
-}
-
-.title_subscribe_2 {
-	font-family:"estilo_textregular";
-	font-size:24px;
-	letter-spacing:0pt;
-	line-height:120%;
-	color:rgb(242,242,242);
-	text-align:left;
-	margin-bottom: 0;
-	padding-top: 36px;
-}
-
-.text_subscribe_2 {
-	font-family:"estilo_textregular";
-	font-size:14px;
-	letter-spacing:0pt;
-	line-height:18px;
-	color:rgb(153,153,153);
-	text-align:left;
-}
-
 h1 {
     font-family:"estilo_textbold";
     font-size:20px;
@@ -867,134 +877,6 @@ p {
 	font-size:12px;
 	line-height:16px;
 	color:#fff;
-}
-
-#email, .wysija-email {
-    background-color:rgb(179,179,179);
-    width:368px;
-    height:34px;
-    /* Firefox v3.5+ */
-    -moz-box-shadow:inset 3px 3px 7px rgba(0,0,0,0.35);
-    /* Safari v3.0+ and by Chrome v0.2+ */
-    -webkit-box-shadow:inset 3px 3px 7px rgba(0,0,0,0.35);
-    /* Firefox v4.0+ , Safari v5.1+ , Chrome v10.0+, IE v10+ and by Opera v10.5+ */
-    box-shadow:inset 3px 3px 7px rgba(0,0,0,0.35);
-    border:none;
-    font-family:"estilo_textregular";
-    padding-left: 10px;
-    font-size:24px;
-    line-height:120%;
-    color:rgb(77,77,77);
-    text-align:left;
-    padding: 8px 0 8px 16px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    float: left;
-}
-
-
-#email_2 {
-	width: 236px;
-	background-color:rgb(179,179,179);
-    height:24px;
-    /* Firefox v3.5+ */
-    -moz-box-shadow:inset 3px 3px 7px rgba(0,0,0,0.35);
-    /* Safari v3.0+ and by Chrome v0.2+ */
-    -webkit-box-shadow:inset 3px 3px 7px rgba(0,0,0,0.35);
-    /* Firefox v4.0+ , Safari v5.1+ , Chrome v10.0+, IE v10+ and by Opera v10.5+ */
-    box-shadow:inset 3px 3px 7px rgba(0,0,0,0.35);
-    border:none;
-    font-family:"estilo_textregular";
-    padding-left: 10px;
-    font-size:18px;
-    line-height:120%;
-    color:rgb(77,77,77);
-    text-align:left;
-    padding: 2px 0 2px 16px;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    float: left;
-}
-
-#submit_email_2 {
-	padding: 0px 12px 2px 12px;
-background-color:rgb(54,191,166);
-width: 100px;
-text-align: center;
-height:27px;
-/* Firefox v3.5+ */
--moz-box-shadow:5px 5px 4px rgba(0,0,0,0.2);
-/* Safari v3.0+ and by Chrome v0.2+ */
--webkit-box-shadow:5px 5px 4px rgba(0,0,0,0.2);
-/* Firefox v4.0+ , Safari v5.1+ , Chrome v10.0+, IE v10+ and by Opera v10.5+ */
-box-shadow:5px 5px 4px rgba(0,0,0,0.2);
--ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=5,OffY=5,Color=#33000000,Positive=true)";
-filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=5,OffY=5,Color=#33000000,Positive=true);
--webkit-border-radius: 2px;
--moz-border-radius: 2px;
-border-radius: 2px;    
-border:none;
-font-family:"estilo_textregular";
-font-size:16px;
-color:rgb(255,255,255);
-cursor:pointer;
-margin: 1px 0 0 10px;
-    transition: all 0.2s;
-    -moz-transition: all 0.2s; /* Firefox 4 */
-    -webkit-transition: all 0.2s; /* Safari and Chrome */
-    -o-transition: all 0.2s; /* Opera */
-text-shadow: none;
-}
-
-#submit_email_2:hover{
-    box-shadow: none;
-    -moz-box-shadow:5px 5px 4px rgba(0,0,0,0.2);
-    -webkit-box-shadow:5px 5px 4px rgba(0,0,0,0.2);
-    background-color: rgb(82,148,143);
-}
-
-#email_2::-webkit-input-placeholder {
-    font-family:"estilo_textregular";
-    font-size:18px;
-    line-height:120%;
-    color:rgb(77,77,77);
-}
-
-::-webkit-input-placeholder {
-    font-family:"OpenSansLight";
-    font-size:18px;
-    line-height:120%;
-    color:rgb(77,77,77);
-}
-
-#email_2:-moz-placeholder {
-    font-family:"OpenSansLight";
-    font-size:18px;
-    line-height:120%;
-    color:rgb(77,77,77);
-}
-
-:-moz-placeholder {
-    font-family:"OpenSansLight";
-    font-size:18px;
-    line-height:120%;
-    color:rgb(77,77,77);
-}
-
-#email_2:-ms-input-placeholder {
-    font-family:"OpenSansLight";
-    font-size:18px;
-    line-height:120%;
-    color:rgb(77,77,77);
-}
-
-:-ms-input-placeholder {
-    font-family:"OpenSansLight";
-    font-size:18px;
-    line-height:120%;
-    color:rgb(77,77,77);
 }
 
 
@@ -1124,6 +1006,24 @@ text-shadow: none;
 }
 
 
+.site-navigation {
+	height: 100%;
+	position: relative;
+}
+
+.social-links {
+	position: absolute;
+	bottom: 0;
+}
+
+.social-links a{
+	color: #dadfa3;
+	line-height: 18px;
+	font-size: 18px;
+	padding: 4px 0;
+}
+
+
 .support img {
     padding: 0;
 }
@@ -1166,18 +1066,21 @@ text-shadow: none;
 
 #colophon {
 	background: #231f20;
-	padding: 5px 0;
 	color: #adadad;
-	position: absolute;
+	position: fixed;
 	width: 100%;
+	text-align: center;
 	bottom: 0;
+	z-index: -1;
 }
 
 
 
 .box-middle {
 	width: 100%;
-	text-align: center;
+	text-align: left;
+	position: relative;
+	min-height: 284px;
 }
 
 .box-middle ul {
@@ -1192,6 +1095,25 @@ text-shadow: none;
 
 
 /* Form */
+
+#workplace_chzn a, #life_chzn a, #plan_chzn a, #desk_chzn a{
+	background: none;
+	box-shadow: none;
+	border: none;
+	font-size: 19px;
+	line-height: 24px;
+	font-family: 'estilo_textregular';
+	color: black;
+}
+
+.highlighted {
+	background: #b1bc22 !important;
+}
+
+.chzn-drop {
+	margin-top: 6px;
+	background: #fff !important;
+}
 
 .form_container {
 	overflow:hidden;
@@ -1263,7 +1185,7 @@ text-shadow: none;
 
 /* Landing Page Phase 2 */
 .competition_slider {
-	height: 350px;
+	height: auto;
 }
 
 .video-viewport {

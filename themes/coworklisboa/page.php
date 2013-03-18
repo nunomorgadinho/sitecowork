@@ -16,13 +16,23 @@ get_header(); ?>
 		<div id="primary" class="content-area">
 			<div id="content" class="site-content" role="main">
 
-				<?php while ( have_posts() ) : the_post(); ?>
+				<div class="global_container">
+			
+						<!-- Logotipo -->
+					<div class="logo_container">
+						<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/cwl_bw.png"/>
+				    </div>
 
-					<?php get_template_part( 'content', 'page' ); ?>
+		   			 <span class="clear"></span>
 
-					<?php comments_template( '', true ); ?>
+						<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php endwhile; // end of the loop. ?>
+							<?php get_template_part( 'content', 'page' ); ?>
+
+						<?php endwhile; // end of the loop. ?>
+				
+				
+				</div>
 
 			</div><!-- #content .site-content -->
 		</div><!-- #primary .content-area -->

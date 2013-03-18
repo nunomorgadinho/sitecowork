@@ -11,12 +11,11 @@
   
 
     
-    <div class="competition_slider">
 
-	    <article class="box-middle">
+	    <article class="box-middle" style="display: block">
 	        
 	        
-	        <h1 class="general-title"><?php _e('Add a life to your work today:','cowork')?></h3>
+	        <h1 class="general-title"><?php _e('Add a life to your work today:','cowork')?></h1>
 	        
 	        
 	        <ul class="multiple-selects">
@@ -44,13 +43,19 @@
 	        		
       	</li>
 	        	<li>
-	        		<select>
+	        		<select data-placeholder="<?php _e('choose desk','cowork');?>" name="desk" id="desk" class="chzn-select" style="width:250px;">
 	        			<option><?php _e('choose desk','cowork');?></option>
+	        			<option value="flexible">Flexible Desk</option>
+	        			<option value="typea">A Desk</option>
+	        			<option value="typeb">B(ig) Desk</option>
 	        		</select>
 	        	</li>
 	        	<li>
-	        		<select>
+	        		<select data-placeholder="<?php _e('choose life','cowork');?>" name="life" id="life" class="chzn-select" style="width:250px;">
 	        			<option><?php _e('choose life','cowork');?></option>
+	        			<option value="work">Worklife</option>
+	        			<option value="artist">Artist life</option>
+	        			<option value="artist">Flaneur</option>
 	        		</select>
 	        	</li>
 	        </ul>
@@ -60,9 +65,40 @@
 	    	</p>
 	        
 	       
-	         <p class="navigate"><a class="navigate-link" href="#"><?php _e('> next','cowork');?></a></p>	
+	         <p class="navigate"><a class="navigate-link red" href="#"><?php _e('> next','cowork');?></a></p>	
         	
 	    </article>
+
+<!-- Second Phase -->
+
+	    <article class="box-middle style="display:none">
+	        
+	        
+	        <h1 class="general-title"><?php _e('Your almost done!','cowork')?></h1>
+	        
+	        
+	        <ul class="multiple-selects">
+	        	<input type="text" value="name" placeholder="name" onfocus="this.value='';this.style.color='#000';this.onfocus='';"></input>
+				<input type="text" value="adress" placeholder="adress" onfocus="this.value='';this.style.color='#000';this.onfocus='';"></input>
+				<input type="email" value="email" placeholder="email" onfocus="this.value='';this.style.color='#000';this.onfocus='';"></input>
+				<input type="text" value="mobile phone" placeholder="mobile phone" onfocus="this.value='';this.style.color='#000';this.onfocus='';"></input>
+	        </ul>
+	        
+	       
+	         <p class="navigate"><a class="navigate-link red" href="#"><?php _e('> send','cowork');?></a></p>	
+        	
+	    </article>
+
+<!-- Third Phase -->
+		
+
+	    <article class="box-middle">
+	        
+	        
+	        <h2 class="general-title"><?php _e('Yes, it’s this simple to start working with us. Now a human called Ana Dias will take your subscription from here. We love you already, you know?','cowork')?></h2>
+			<p class="navigate"><a class="navigate-link green" href="#"><?php _e('> done!','cowork');?></a></p>
+	    </article>
+
 
 	
 	    <!-- <article class="competition_form_register">
@@ -103,6 +139,4 @@
 	    </article>-->
 	
 	    <span class="clear"></span>
-    
-    </div>
 
