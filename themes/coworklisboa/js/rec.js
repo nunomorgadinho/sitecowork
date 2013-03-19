@@ -86,7 +86,7 @@ jQuery(document).ready(function($) {
 		  			{
 		  			jQuery('#error_msg').html(j);
 		  			jQuery('#error_msg').fadeIn(500);
-		  			console.log(j);
+		  			
 		  			}
 		  		else
 		  			{
@@ -264,8 +264,7 @@ jQuery(document).ready(function($) {
 	}, jQuery.format( "URLs cannot be equal.") );
 
 	
-	console.log(jQuery(".chzn-select")); 
 	
-	jQuery(".chzn-select").chosen({disable_search:true, disable_search_threshold: 5});
+	jQuery(".chzn-select").chosen({disable_search:true, disable_search_threshold: 7});
 	
 });
