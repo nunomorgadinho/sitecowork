@@ -126,31 +126,14 @@ add_action( 'widgets_init', 'rec_widgets_init' );
  * Enqueue scripts and styles
  */
 function rec_scripts() {
+
 	wp_enqueue_style( 'jquery-ui', 'http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css' );
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 	
-	wp_enqueue_script( 'validate', 'http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.0/jquery.validate.min.js', array( 'jquery', 'jquery-form' ) );
-	wp_enqueue_script( 'rec', get_template_directory_uri() . '/js/rec.js', array( 'validate', 'jquery-ui-autocomplete' ) );
-	wp_localize_script( 'rec', 'rec', array(
-		'minlength' => __( 'Provide at least {0} characters.', 'rec' ),
-		'maxlength' => __( 'Maximum of {0} characters reached.', 'rec' ),
-		'invalid_name' => __( 'Name cannot be empty.', 'rec' ),
-		'name_incomplete' => __( 'Provide at least First and Last names.', 'rec' ),
-		'invalid_email' => __( 'Provide a valid email.', 'rec' ),
-		'email_exists' => __( 'This email is already registered.', 'rec' ),
-		'invalid_role' => __( 'Provide, at least, one role.', 'rec' ),
-		'invalid_url' => __( "Copy/paste links for your 3 best YouTube/Vimeo videos here.", 'rec' ),
-		'validate_name_ajax' => admin_url( 'admin-ajax.php?action=check_for_name_length' ),
-		'validate_email_ajax' => admin_url( 'admin-ajax.php?action=check_for_email' ),
-		'available_roles' => get_terms( 'user_role', array( 'fields' => 'names', 'hide_empty' => false ) ),
-		'get_video_background' => admin_url( 'admin-ajax.php?action=get_video_background' ),
-		'valid_url' => admin_url( 'admin-ajax.php?action=validate_url' ),
-		'validate_url' => __( 'Only YouTube.com and Vimeo.com videos.', 'rec' ),
-		)
-	);
-
+	wp_enqueue_script( 'rec', get_template_directory_uri() . '/js/rec.js');
 	
-	wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', true );
+	
+//	wp_enqueue_script( 'small-menu', get_template_directory_uri() . '/js/small-menu.js', array( 'jquery' ), '20120206', true );
 	wp_enqueue_script( 'sliding-form', get_template_directory_uri() . '/js/sliding.form.js', array( 'jquery' ), '20120206', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -158,7 +141,7 @@ function rec_scripts() {
 	}
 
 	if ( is_singular() && wp_attachment_is_image() ) {
-		wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
+	//	wp_enqueue_script( 'keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
 	
 	
