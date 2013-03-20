@@ -150,11 +150,16 @@ textarea {
 select, input {
 	font-family: 'estilo_textregular';
 	font-size: 19px;
+	background: #cccccc;
 	background-color: none;
 	background: none;
 	outline: none;
 	border: none;
 	display: block;
+}
+
+.chzn-container-single {
+	background: none !important;
 }
 
 .multiple-selects select {
@@ -437,10 +442,7 @@ a:active {
 ----------------------------------------------- */
 
 #masthead {
-	position: absolute;
 	background: #b0bc22;
-	top: 25%;
-	left: 0;
 	padding: 30px;
 	-webkit-border-top-right-radius: 40px;
 	-webkit-border-bottom-right-radius:40px;
@@ -457,9 +459,6 @@ a:active {
 }
 
 #secondary {
-	position: absolute;
-	right: 0;
-	top: 25%;
 	background: #231f20;
 	padding: 30px;
 
@@ -482,9 +481,25 @@ a:active {
 }
 
 #content {
-	top: 17%;
+	top: 13%;
 	position: absolute;
 	width: 100%;
+}
+
+.container_side_right, .container_side_left {
+	position: absolute;
+	top: 13%;
+	padding-top: 74px;
+}
+
+.container_side_right {
+	right: 0;
+	z-index: 999;
+}
+
+.container_side_left {
+	left: 0;
+	z-index: 999;
 }
 
 .main-navigation {
@@ -937,7 +952,28 @@ a.green, a.green:visited, a.green:hover {
 /* --- Tiles --- */
 
 .global_wrapper {
-	position: relative;
+	position: absolute;
+	top: 74px;
+	width: 100%;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.static {
+	position: static;
+}
+
+.gallery_container {
+	margin-left: 215px;
+	margin-right: 215px;
+}
+
+.gallery_container img {
+	border-radius: 20%;
+	border: 3px solid #231f20;
+	margin: 0 1% 10px 1%;
+	width: 13%;
+	min-width: 100px;
 }
 
 .image_container_left {
@@ -964,45 +1000,13 @@ a.green, a.green:visited, a.green:hover {
 
 .image_container_right {
 	margin-right: 200px;
-	position: absolute;
-	right: 0;
-	top: 0;
+	float: right;
 	width: 24%;
 	max-width: 400px;
 }
 
 .form {
     margin-top: 46px;
-}
-
-
-#submit_email, .wysija-submit {
-padding: 0 12px 6px 12px;
-background-color:rgb(54,191,166);
-width:auto;
-height:48px;
-/* Firefox v3.5+ */
--moz-box-shadow:5px 5px 4px rgba(0,0,0,0.2);
-/* Safari v3.0+ and by Chrome v0.2+ */
--webkit-box-shadow:5px 5px 4px rgba(0,0,0,0.2);
-/* Firefox v4.0+ , Safari v5.1+ , Chrome v10.0+, IE v10+ and by Opera v10.5+ */
-box-shadow:5px 5px 4px rgba(0,0,0,0.2);
--ms-filter:"progid:DXImageTransform.Microsoft.dropshadow(OffX=5,OffY=5,Color=#33000000,Positive=true)";
-filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=5,OffY=5,Color=#33000000,Positive=true);
--webkit-border-radius: 2px;
--moz-border-radius: 2px;
-border-radius: 2px;    
-border:none;
-font-family:"OpenSansLight";
-font-size:24px;
-color:rgb(255,255,255);
-cursor:pointer;
-margin: 1px 0 0 10px;
-    transition: all 0.2s;
-    -moz-transition: all 0.2s; /* Firefox 4 */
-    -webkit-transition: all 0.2s; /* Safari and Chrome */
-    -o-transition: all 0.2s; /* Opera */
-text-shadow: none;
 }
 
 .submit2 {
@@ -1015,18 +1019,6 @@ text-shadow: none;
 	left:15px;
 }
 
-#submit_email:hover, .wysija-submit:hover{
-    box-shadow: none;
-    -moz-box-shadow:5px 5px 4px rgba(0,0,0,0.2);
-    -webkit-box-shadow:5px 5px 4px rgba(0,0,0,0.2);
-    background-color: rgb(82,148,143);
-}
-
-.widget_wysija_cont .form-valid-sub input.defaultlabels {
-	color: rgb(77,77,77);
-	text-transform:lowercase;
-	
-}
 
 #error_msg {
 	height: 0;
@@ -1201,71 +1193,7 @@ text-shadow: none;
 	background: #fff !important;
 }
 
-.form_container {
-	overflow:hidden;
-	clear:both;
-	width: 620px;
-	margin: 0 auto;
-	margin-top: 30px;
-}
 
-.form_container div.error{
-	background: none !important;
-	color: #F27052;
-	margin-bottom: 12px;
-}
-
-.first_row {
-	float: left;
-	padding-right: 70px;
-	width: 250px;
-}
-.second_row {
-	width: 295px;
-	float:left;
-}
-
-.first_row input{
-	margin-bottom: 12px;
-	width: 250px;
-}
-
-.form_container input {
-	background-color:rgb(179,179,179) !important;
-	float: left;
-}
-.second_row label {
-	font-family: 'estilo_textregular';
-	color: white;
-	background: #333333;
-	font-size: 18px;
-	/*padding: 8px 10px;*/
-	float: left;
-	line-height: 30px;
-	width: 30px;
-} 
-
-.second_row input {
-	margin-bottom: 12px;
-	width: 250px;
-}
-
-.formfield {
-	background-color: rgb(179,179,179);
-	-moz-box-shadow: inset 3px 3px 7px rgba(0,0,0,0.35);
-	-webkit-box-shadow: inset 3px 3px 7px rgba(0,0,0,0.35);
-	box-shadow: inset 3px 3px 7px rgba(0,0,0,0.35);
-	border: none;
-	font-family: "estilo_textregular";
-	font-size: 18px;
-	color: rgb(77,77,77);
-	text-align: left;
-	padding: 0px 0 0px 10px;
-	-webkit-border-radius: 2px;
-	-moz-border-radius: 2px;
-	border-radius: 2px;
-	height: 30px;
-}
 
 
 

@@ -6,6 +6,8 @@
  * @since Rec 1.0
  */
 ?>
+
+<div class="container_side_right">
 		<div id="secondary" class="widget-area" role="complementary">
 			<!-- <?php do_action( 'before_sidebar' ); ?>
 			<?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
@@ -30,7 +32,9 @@
 					</ul>
 				</aside> -->
 
-				<a href="#"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/zon.png"></a>
+				<a href="http://www.zon.pt/" target="_blank"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/zon.png"></a>
 
 			<?php endif; // end sidebar widget area ?>
 		</div><!-- #secondary .widget-area -->
+
+</div>

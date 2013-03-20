@@ -9,6 +9,7 @@
  *
  * @package Rec
  * @since Rec 1.0
+ * @Template Name: Gallery
  */
 
 get_header(); ?>
@@ -18,27 +19,14 @@ get_header(); ?>
 
 				
 				<div class="global_container grey-fill">
-					<a href="#"><?php _e('This is a beta version','rec'); ?></a>
+					<a href="#"><?php _e('Want to know all the residents?','rec'); ?></a>
 		    	</div>
 
-				<div class="global_container">
-			
-						<!-- Logotipo -->
-					<div class="logo_container">
-						<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/cwl_bw.png"/>
-				    </div>
-
-		   			 <span class="clear"></span>
-
-						<?php while ( have_posts() ) : the_post(); ?>
-
-							<?php get_template_part( 'content', 'page' ); ?>
-
-						<?php endwhile; // end of the loop. ?>
 				
-				
-				</div>
 
+							<?php get_template_part( 'content', 'gallery' ); ?>
+
+						
 				<div class="global_container red-fill">
 					<a href="#"><?php _e('This wallpaper can be yours','rec'); ?></a>
 		    	</div>
