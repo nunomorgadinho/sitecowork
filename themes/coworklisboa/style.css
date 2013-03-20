@@ -162,6 +162,10 @@ select, input {
 	background: none !important;
 }
 
+.chzn-container-single:hover {
+	background: #a5a9ac !important;
+}
+
 .multiple-selects select {
 	-webkit-appearance: none;
 	background: transparent;
@@ -869,7 +873,7 @@ h1 {
 h2 {
     font-family:"estilo_textbold";
     font-size:28px;
-    line-height:24px;
+    line-height:28px;
     color:rgb(242,242,242);
 }
 
@@ -943,11 +947,19 @@ a.red, a.red:visited, a.red:hover {
 	text-decoration: none;
 	right: 330px;
 	position: relative;
+	padding: 4px 8px;
+	border-radius: 25px;
+}
+
+a.navigate-link:hover {
+	background: #eadcdc;
 }
 
 a.green, a.green:visited, a.green:hover {
 	color: #b1bc22;
 	text-decoration: none;
+	padding: 4px 8px;
+	border-radius: 25px;
 }
 
 
@@ -1101,10 +1113,15 @@ a.green, a.green:visited, a.green:hover {
 }
 
 .social-links a{
-	color: #dadfa3;
+	color: #fff;
 	line-height: 18px;
 	font-size: 18px;
 	padding: 4px 0;
+	opacity: 0.6;
+}
+
+.social-links a:hover {
+	opacity: 1;
 }
 
 
