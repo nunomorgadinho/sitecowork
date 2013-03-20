@@ -7,11 +7,8 @@
  * @package Rec
  * @since Rec 1.0
  */
-//set_language();
-
 ?>
 <!DOCTYPE html>
-<!-- Comentario-->
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
