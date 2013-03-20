@@ -1,5 +1,5 @@
 /*
-Theme Name: Rec
+Theme Name: Coworklisboa
 Theme URI: http://www.widgilabs.com/
 Author: WidgiLabs
 Author URI: http://widgilabs.com/
@@ -131,28 +131,6 @@ a:active { /* Improves readability when focused and also mouse hovered in all br
 }
 a img {
 	border: 0;
-}
-
-p.navigate{
-	text-align: right;
-	position: absolute;
-	bottom: 0;
-	margin-bottom: 0;
-	right: 20px;
-}
-
-
-a.navigate-link:active, a.navigate-link:visited, a.navigate-link:link{
-	font-family: 'estilo_textbold';
-	font-size: 18px;
-}
-
-a.red, a.red:visited, a.red:hover {
-	color: #ed1f24;
-}
-
-a.green, a.green:visited, a.green:hover {
-	color: #b1bc22;
 }
 
 /* =Global
@@ -501,7 +479,7 @@ a:active {
 }
 
 #content {
-	top: 20%;
+	top: 17%;
 	position: absolute;
 	width: 100%;
 }
@@ -566,6 +544,7 @@ a:active {
 
 	color: white;
 	font-family: 'estilo_textbold';
+	margin-left: 9px;
 }
 
 .main-navigation li.current_page_item a:before,
@@ -802,16 +781,32 @@ body {
     overflow-y: visible;    
 }
 
+.global_container a, .global_container a:visited {
+	color: #58595b;
+	text-decoration: underline;
+	font-family: 'estilo_textbold';
+}
+
+.global_container a:hover {
+	text-decoration: none;
+}
+
+.global_container p {
+	color: #fff;
+	margin-bottom: 6px;
+}
+
 .red-fill {
 	text-align: center;
 	background: #ed1f24;
 	color: white;
 }
 
-.red-fill a {
-	color: white;
+.red-fill a, .red-fill a:visited {
+	color: #fff;
 	font-family: 'estilo_textbold';
 	font-size: 20px;
+	text-decoration: none;
 }
 
 .grey-fill {
@@ -820,10 +815,11 @@ body {
 	color: white;
 }
 
-.grey-fill a{
+.grey-fill a, .grey-fill a:visited{
 	color: #a7a9ac;
 	font-family: 'estilo_textbold';
 	font-size: 20px;
+	text-decoration: none;
 }
 
 .logo_container {
@@ -848,6 +844,7 @@ h1 {
     line-height:120%;
     color:white;
     margin-bottom: 12px;
+    display: inline-block;
 }
 
 h2 {
@@ -873,13 +870,102 @@ p {
     text-align:left;
 }
 
-.small{
+p.input {
+	font-family:"estilo_textbold";
+    font-size:20px;
+    color: #fff;
+    margin-bottom: 0;
+    margin-top: 12px;
+	line-height: 20px;
+}
+
+p.output {
+	color: #231f20;
+	font-size: 16px;
+	margin-bottom: 6px;
+    margin-top: 0;
+
+}
+
+.small {
 	font-size:12px;
 	line-height:16px;
 	color:#fff;
 }
 
+.member-line {
+	color: #fff;
+	margin-bottom: 6px;
+}
 
+.member-name {
+	color: #58595b;
+	text-decoration: underline;
+	font-family: 'estilo_textbold';
+	margin-right: 5px;
+}
+
+p.navigate{
+	text-align: right;
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 0;
+	right: 20px;
+}
+
+a.navigate-link:active, a.navigate-link:visited, a.navigate-link:link{
+	font-family: 'estilo_textbold';
+	font-size: 18px;
+	text-decoration: none;
+}
+
+a.red, a.red:visited, a.red:hover {
+	color: #ed1f24;
+	text-decoration: none;
+}
+
+a.green, a.green:visited, a.green:hover {
+	color: #b1bc22;
+	text-decoration: none;
+}
+
+
+/* --- Tiles --- */
+
+.global_wrapper {
+	position: relative;
+}
+
+.image_container_left {
+	margin-left: 215px;
+	float: left;
+	width: 24%;
+	max-width: 400px;
+}
+
+.image_container_left img {
+	width: 45%;
+	height: 45%;
+	border-radius: 30px;
+	border: 3px solid #231f20;
+	margin-right: 2%;
+	margin-bottom: 10px;
+}
+
+.image_container_right img {
+	width: 95%;
+	border-radius: 30px;
+	border: 3px solid #231f20;
+}
+
+.image_container_right {
+	margin-right: 200px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 24%;
+	max-width: 400px;
+}
 
 .form {
     margin-top: 46px;
@@ -1049,12 +1135,8 @@ text-shadow: none;
     margin-left: 0;
 }
 
-.facebook_btn, .mail_btn {
-    height: 36px;
-}
-
-.spain_btn {
-    height: 100px;
+.notation {
+	color:  #ed1f24;
 }
 
 }

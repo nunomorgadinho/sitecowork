@@ -9,6 +9,7 @@
  *
  * @package Rec
  * @since Rec 1.0
+ * @Template Name: Info and Contacts
  */
 
 get_header(); ?>
@@ -32,7 +33,7 @@ get_header(); ?>
 
 						<?php while ( have_posts() ) : the_post(); ?>
 
-							<?php get_template_part( 'content', 'page' ); ?>
+							<?php get_template_part( 'content', 'infocontacts' ); ?>
 
 						<?php endwhile; // end of the loop. ?>
 				

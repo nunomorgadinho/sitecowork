@@ -50,8 +50,8 @@
 			
 
 				<ul class="social-links">
-					<li><a href="#"><?php _e('Facebook','rec'); ?></a></li>
-					<li><a href="#"><?php _e('Twitter','rec'); ?></a></li>
+					<li><a href="http://www.facebook.com/Coworklisboalx?fref=ts" target="_blank"><?php _e('Facebook','rec'); ?></a></li>
+					<li><a href="http://twitter.com/coworklisboa" target="_blank"><?php _e('Twitter','rec'); ?></a></li>
 				</ul>
 		</nav><!-- .site-navigation .main-navigation -->
 	</header><!-- #masthead .site-header -->
