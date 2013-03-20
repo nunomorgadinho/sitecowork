@@ -31,14 +31,74 @@ jQuery(function() {
 	show the navigation bar
 	*/
 	//jQuery('#navigation').show();
+
+	var lock_workplace = 0;
+	var lock_plan = 0;
+	var lock_life = 0;
 	
+	jQuery('#workplace').change(function(){
+		lock_workplace++;
+		unblock_next();
+	});
+	jQuery('#plan').change(function(){
+		lock_plan++;
+		unblock_next();
+	});
+
+	jQuery('#life').change(function(){
+		lock_life++;
+		unblock_next();
+	});
+	
+	function unblock_next()
+	{
+		//console.log(jQuery('#life').val());
+		
+		if (jQuery('#workplace').val() == "choose workplace")
+			lock_workplace = 0;
+		if (jQuery('#plan').val() == "choose plan")
+			lock_plan = 0;
+		if (jQuery('#life').val() == "choose life")
+			lock_life = 0;
+		
+		if (lock_workplace > 0 && lock_plan > 0 && lock_life > 0 ) {
+			jQuery('a.navigate-link').fadeIn(1000);
+		} else {
+			jQuery('a.navigate-link').fadeOut(100);
+		}
+	}
 	/*
 	when clicking on a navigation link 
 	the form slides to the corresponding fieldset
 	*/
+	jQuery('a.navigate-link').hide();
     jQuery('a.navigate-link').bind('click',function(e){
 		var jQuerythis	= jQuery(this);
 		var prev	= current;
+		
+		// validate form
+		if (jQuery(this).html() == "&gt; send") {
+			validateSteps();
+			
+			if(jQuery('#formElem').data('errors')){
+				console.log("form errors");
+				return false;
+			} 
+			
+		  	if (jQuery('#formElem').serialize() != "") serializedFormData = jQuery('#formElem').serialize();
+		  		
+	  		var data = {
+		 		action: 'new_submit',
+		 		submit_data: serializedFormData
+		 	};
+	  		
+	  		jQuery.post(ajaxurl, data, function(response) {
+	  					  			
+	  		});
+		
+		}
+
+		
 		jQuerythis.closest('ul').find('li').removeClass('selected');
         jQuerythis.parent().addClass('selected');
 		/*
@@ -92,8 +152,10 @@ jQuery(function() {
 		var FormErrors = false;
 		for(var i = 1; i < fieldsetCount; ++i){
 			var error = validateStep(i);
-			if(error == -1)
+			if(error == -1) {
+				console.log("falhei o validate no "+i);
 				FormErrors = true;
+			}
 		}
 		jQuery('#formElem').data('errors',FormErrors);	
 	}
@@ -109,15 +171,23 @@ jQuery(function() {
 		var hasError = false;
 		jQuery('#formElem').children(':nth-child('+ parseInt(step) +')').find(':input:not(button)').each(function(){
 			var jQuerythis 		= jQuery(this);
+
+			if (step == 1)
+				return;
+			
 			var valueLength = jQuery.trim(jQuerythis.val()).length;
 			
 			if(valueLength == ''){
+				console.log("para o el "+jQuerythis+" o val eh vazio");
 				hasError = true;
 				jQuerythis.css('background-color','#FFEDEF');
 			}
 			else
 				jQuerythis.css('background-color','#FFFFFF');	
 		});
+		
+		
+		
 		var jQuerylink = jQuery('#navigation li:nth-child(' + parseInt(step) + ') a');
 		jQuerylink.parent().find('.error,.checked').remove();
 		
@@ -136,7 +206,6 @@ jQuery(function() {
 	*/
 	jQuery('#registerButton').bind('click',function(){
 		if(jQuery('#formElem').data('errors')){
-			alert('Please correct the errors in the Form');
 			return false;
 		}	
 	});

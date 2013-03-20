@@ -19,7 +19,7 @@ get_header(); ?>
 
 				
 				<div class="global_container grey-fill">
-					<a href="#"><?php _e('Want to know all the residents?','rec'); ?></a>
+					<a href=""><?php _e('This is a beta version','rec'); ?></a>
 		    	</div>
 
 				
@@ -28,7 +28,7 @@ get_header(); ?>
 
 						
 				<div class="global_container red-fill">
-					<a href="#"><?php _e('This wallpaper can be yours','rec'); ?></a>
+					<a href="#"><?php _e('Did we tell you this is beta?','rec'); ?></a>
 		    	</div>
 
 			</div><!-- #content .site-content -->

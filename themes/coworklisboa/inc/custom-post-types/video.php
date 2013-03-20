@@ -566,7 +566,7 @@ class REC_Video {
 
 /** Global object to manipulate video post type */
 global $_video_post_type;
-$_video_post_type = new REC_Video();
+//$_video_post_type = new REC_Video();
 
 
 function add_video_by_url( $url, $user_id = '' ) {

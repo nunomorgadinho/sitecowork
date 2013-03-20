@@ -19,7 +19,9 @@ get_header(); ?>
 
 				
 				<div class="global_container grey-fill">
-					<a href="#"><?php _e('This is a beta version','rec'); ?></a>
+
+					<a href=""><?php _e('This is a beta version','rec'); ?></a>
+
 		    	</div>
 
 				<div class="global_container">
