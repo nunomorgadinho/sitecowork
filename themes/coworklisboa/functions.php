@@ -318,7 +318,6 @@ function new_submit_callback(){
 	
 	$message = str_replace('WORKPLACE', $params['workplace'], $message);
 	$message = str_replace('PLAN', $params['plan'], $message);
-	$message = str_replace('DESK', $params['desk'], $message);
 	$message = str_replace('LIFE', $params['life'], $message);
 	
 	$quote = random_quote();

@@ -34,7 +34,6 @@ jQuery(function() {
 
 	var lock_workplace = 0;
 	var lock_plan = 0;
-	var lock_desk = 0;
 	var lock_life = 0;
 	
 	jQuery('#workplace').change(function(){
@@ -45,10 +44,7 @@ jQuery(function() {
 		lock_plan++;
 		unblock_next();
 	});
-	jQuery('#desk').change(function(){
-		lock_desk++;
-		unblock_next();
-	});
+
 	jQuery('#life').change(function(){
 		lock_life++;
 		unblock_next();
@@ -62,12 +58,10 @@ jQuery(function() {
 			lock_workplace = 0;
 		if (jQuery('#plan').val() == "choose plan")
 			lock_plan = 0;
-		if (jQuery('#desk').val() == "choose desk")
-			lock_desk = 0;
 		if (jQuery('#life').val() == "choose life")
 			lock_life = 0;
 		
-		if (lock_workplace > 0 && lock_plan > 0 && lock_desk > 0 && lock_life > 0 ) {
+		if (lock_workplace > 0 && lock_plan > 0 && lock_life > 0 ) {
 			jQuery('a.navigate-link').fadeIn(1000);
 		} else {
 			jQuery('a.navigate-link').fadeOut(100);

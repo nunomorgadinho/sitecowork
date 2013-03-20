@@ -393,7 +393,6 @@ Telemóvel: MOBILE<br/><br/>
 
 Workplace: WORKPLACE<br/><br/>
 Plano: PLAN<br/><br/>
-Mesa: DESK<br/><br/>
 Life: LIFE<br/><br/>
 
 <br/><br/>

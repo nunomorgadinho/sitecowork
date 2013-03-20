@@ -32,22 +32,15 @@
 	      	  		<li>
 			        	<select name="plan" id="plan" class="chzn-select" style="width:250px;">
 					     <option><?php _e('choose plan','cowork');?></option>
-					      <option value="fixed-desk">Month Fixed Desk (M €120 / L €145) +iva</option>
-					      <option value="hub">HUB x3 / x4 (ask!)</option>
-					      <option value="month-flex">Month Flex Desk (€99) iva_inc</option>
-					      <option value="week-flex"> Week Flex Desk (€39) iva_inc</option>
-					      <option value="day">Day Pass (€10) iva_inc</option>
-					      <option value="no-desk">Nomad No Desk (€39) iva_inc</option>
+						  <option value="hub">Team HUB (ask us!)</option>
+					      <option value="fixed-desk-large">Month Fixed Desk Large €178,35</option>
+					      <option value="fixed-desk-medium">Month Fixed Desk Medium €147,60</option>
+					      <option value="month-flex">Month Flex Desk €99</option>
+					      <option value="no-desk">Nomad No Desk €49</option>
+					      <option value="week-flex"> Week Flex Desk €39</option>
+					      <option value="day">Day Pass €10</option>
 		    			</select> 	     		
       				</li>
-	        		<li>
-		        		<select name="desk" id="desk" class="chzn-select" style="width:250px;">
-		        			<option><?php _e('choose desk','cowork');?></option>
-		        			<option value="flexible">Flexible Desk</option>
-		        			<option value="typea">A Desk</option>
-		        			<option value="typeb">B(ig) Desk</option>
-		        		</select>
-	        		</li>
 	        		<li>
 		        		<select name="life" id="life" class="chzn-select" style="width:250px;">
 		        			<option><?php _e('choose life','cowork');?></option>
@@ -67,7 +60,7 @@
 		<!-- Second Phase -->
 		<fieldset class="box-middle step">
 	    	        
-	        <h1 class="general-title"><?php _e('Your almost done!','cowork')?></h1>
+	        <h1 class="general-title"><?php _e('You are almost done!','cowork')?></h1>
 	        <ul class="multiple-selects">
 	        	<input type="text" name="name" placeholder="name" size="50" required/>
 				<input type="text" name="address" placeholder="address" size="50" required/>
