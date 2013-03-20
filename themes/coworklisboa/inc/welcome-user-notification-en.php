@@ -361,7 +361,7 @@ $html = <<<EOT
                                             <td class="headerContent">
                                             
                                             	<!-- // Begin Module: Standard Header Image \\ -->
-                                            	<img src="http://www.rec-videos.com/wp-content/themes/reclanding/images/rec_logo.png" style="max-width:600px;" id="headerImage campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext />
+                                            	<img src="http://coworklisboa.tiratemas.com/wp-content/themes/coworklisboa/images/cwl_bw.png" style="max-width:600px;" id="headerImage campaign-icon" mc:label="header_image" mc:edit="header_image" mc:allowdesigner mc:allowtext />
                                             	<!-- // End Module: Standard Header Image \\ -->
                                             
                                             </td>
@@ -384,22 +384,21 @@ $html = <<<EOT
                                                             
                                                             <div mc:edit="std_content00">
 <br/>
- Welcome to REC!<br/><br/>
+Yupiiiii! Houve uma nova inscrição no site do Coworklisboa!<br/><br/>
 
-REC is a professional video network where video producers and customers meet, interact and find interesting projects. If you are a creative producer REC is your platform for getting new business! Upload your best works, present them to the world and thousands of potential customers will know you and your skills.<br/><br/>
+Nome: NAME<br/><br/>
+Morada: ADDRESS<br/><br/>
+E-Mail: EMAIL<br/><br/>
+Telemóvel: MOBILE<br/><br/>
 
-If you need a video project (for TV and online adds, music videoclips, product presentation, and many more) or need to find a producer, then REC is your solution. Get a REC account and launch a competition to the REC community or search among the REC video gallery and contact the best producer for your needs!<br/><br/>
+Workplace: WORKPLACE<br/><br/>
+Plano: PLAN<br/><br/>
+Mesa: DESK<br/><br/>
+Life: LIFE<br/><br/>
 
-Our goal is to make video production more connected, easier and funnier than ever before.<br/><br/>
-
-And believe it or not, REC is free for everyone!<br/><br/>
-Stay tuned to REC news because in few weeks we will open the first REC
-competition. 
-
- 
 <br/><br/>
-	<a title="Follow us on Facebook " href="http://www.facebook.com/PRESSREC" target="_blank">
-	Follow us on Facebook</a>
+"QUOTE"
+
 
 </div>
                                                         </td>
@@ -428,9 +427,7 @@ competition.
                                                             <div mc:edit="std_footer">
 																<em></em>
 																<small>
-																Please do not reply to this e-mail. Keep it to yourself as a proof of your invitation request on REC.
-																This e-mail was generated automatically after your e-mail submission on rec-videos.com.
-																Please disregard this e-mail if you did not asked for a REC invitation if that's the case accept our apologies. © 2013, Rec-Videos			
+																Por favor não responder a este e-mail automático. Sabia que Marie Curie foi a única pessoa contemplada com dois Prêmios Nobel em diferentes categorias científicas?	
 																</small>
                                                             </div>
                                                         </td>

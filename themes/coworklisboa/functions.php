@@ -284,3 +284,74 @@ function set_language(){
 	}
 	
 }
+
+
+
+
+
+
+add_action('wp_ajax_nopriv_new_submit', 'new_submit_callback');
+add_action('wp_ajax_new_submit', 'new_submit_callback');
+
+/**
+ * New user is checking for invite.
+ * check if user already exists. If so return false otherwise
+ */
+function new_submit_callback(){
+	global $wpdb;
+
+	$submit_data = $_POST['submit_data'];
+	$params = array();
+	parse_str($submit_data, $params);
+	
+	$to = get_bloginfo('admin_email');
+	$subject = 'Inscrição através do site do Coworklisboa';
+	
+	/* mail the message */	
+	include("inc/welcome-user-notification-en.php");
+	$message = $html;
+	
+	$message = str_replace('NAME', $params['name'], $message);
+	$message = str_replace('ADDRESS', $params['address'], $message);
+	$message = str_replace('EMAIL', $params['email'], $message);
+	$message = str_replace('MOBILE', $params['mobile'], $message);
+	
+	$message = str_replace('WORKPLACE', $params['workplace'], $message);
+	$message = str_replace('PLAN', $params['plan'], $message);
+	$message = str_replace('DESK', $params['desk'], $message);
+	$message = str_replace('LIFE', $params['life'], $message);
+	
+	$quote = random_quote();
+	$message = str_replace('QUOTE', $quote, $message);
+	
+	add_filter('wp_mail_content_type',create_function('', 'return "text/html";'));
+	$res = wp_mail($to, $subject, $message);
+	
+	die($meta);
+}
+
+function random_quote()
+{
+	$num = rand(1, 6);
+	//Based on the random number, gives a quote
+	switch ($num)
+	{
+		case 1:
+			return "Time is money";
+			
+		case 2:
+			return "An apple a day keeps the doctor away";
+			
+		case 3:
+			return "Elmo loves dorthy";
+			
+		case 4:
+			return "Off to see the wizard";
+			
+		case 5:
+			return "Tomorrow is another day";
+			
+		case 6:
+			return "Cowork extravangaza!";
+	}
+}

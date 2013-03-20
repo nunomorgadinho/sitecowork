@@ -70,11 +70,11 @@
 	        <h1 class="general-title"><?php _e('Your almost done!','cowork')?></h1>
 	        <ul class="multiple-selects">
 	        	<input type="text" name="name" placeholder="name" size="50" required/>
-				<input type="text" name="adress" placeholder="adress" size="50" required/>
+				<input type="text" name="address" placeholder="address" size="50" required/>
 				<input type="email" name="email" placeholder="email" size="50" required/>
-				<input type="text" name="mobile phone" placeholder="mobile phone" size="50" required/>
+				<input type="text" name="mobile" placeholder="mobile phone" size="50" required/>
 	        </ul>
-	         <p class="navigate"><a class="navigate-link red" href="#"><?php _e('> send','cowork');?></a></p>	       	
+	         <p class="navigate"><a id="" class="navigate-link red" href="#"><?php _e('> send','cowork');?></a></p>	       	
 	    
 	    </fieldset>
 
@@ -82,7 +82,7 @@
 		<!-- Third Phase -->
 		<fieldset class="box-middle step">
 	        <h2 class="general"><?php _e('Yes, it’s this simple to start working with us. Now a human called Ana Dias will take your subscription from here. We love you already, you know?','cowork')?></h2>
-			<p class="navigate"><a id="registerButton" class="navigate-link green" href="#"><?php _e('> done!','cowork');?></a></p>
+			<p class="navigate"><a id="" class="navigate-link green" href="#"><?php _e('> done!','cowork');?></a></p>
 		</fieldset>
 	 </form>
 	 </div><!-- #steps -->

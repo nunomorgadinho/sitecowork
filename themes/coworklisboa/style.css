@@ -926,6 +926,8 @@ a.navigate-link:active, a.navigate-link:visited, a.navigate-link:link{
 a.red, a.red:visited, a.red:hover {
 	color: #ed1f24;
 	text-decoration: none;
+	right: 330px;
+	position: relative;
 }
 
 a.green, a.green:visited, a.green:hover {
