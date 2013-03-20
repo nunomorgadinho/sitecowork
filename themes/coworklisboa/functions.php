@@ -127,7 +127,10 @@ add_action( 'widgets_init', 'rec_widgets_init' );
  */
 function rec_scripts() {
 
-	wp_enqueue_style( 'jquery-ui', 'http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css' );
+	wp_enqueue_script('jquery');
+	wp_enqueue_script('jquery-ui');
+	
+//	wp_enqueue_style( 'jquery-ui', 'http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css' );
 	wp_enqueue_style( 'style', get_stylesheet_uri() );
 	
 	wp_enqueue_script( 'rec', get_template_directory_uri() . '/js/rec.js');
@@ -149,7 +152,7 @@ function rec_scripts() {
 	wp_register_script( 'ajax-chosen',get_template_directory_uri(). '/js/chosen/ajax-chosen.jquery.js', array('jquery', 'chosen') );
 	wp_register_script( 'chosen', get_template_directory_uri(). '/js/chosen/chosen.jquery.js', array('jquery'));
 	
-	wp_enqueue_script( 'wc-chosen',  get_template_directory_uri() . '/assets/js/frontend/chosen-frontend.js', array( 'chosen' ),  '',true );
+	wp_enqueue_script( 'wc-chosen',  get_template_directory_uri() . '/js/chosen/chosen-frontend.js', array( 'chosen' ),  '',true );
 	wp_enqueue_style( 'woocommerce_chosen_styles', get_template_directory_uri() . '/js/chosen/chosen.css' );
 	
 	
