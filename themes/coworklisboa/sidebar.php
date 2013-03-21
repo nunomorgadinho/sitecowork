@@ -32,7 +32,7 @@
 					</ul>
 				</aside> -->
 
-				<a href="http://www.zon.pt/" target="_blank"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/zon.png"></a>
+				<a href="http://www.zonempresas.pt/" target="_blank"><img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/zon.png"></a>
 
 			<?php endif; // end sidebar widget area ?>
 		</div><!-- #secondary .widget-area -->
