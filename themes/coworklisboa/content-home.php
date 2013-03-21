@@ -43,10 +43,12 @@
       				</li>
 	        		<li>
 		        		<select name="life" id="life" class="chzn-select" style="width:250px;">
-		        			<option><?php _e('choose life','cowork');?></option>
-		        			<option value="work">Worklife</option>
-		        			<option value="artist">Artist life</option>
-		        			<option value="flaneur">Flaneur</option>
+		        			<option><?php _e('choose life','cowork');?></option>		        			 
+		        			<option value="Creative type">Creative type</option>
+		        			<option value="Tech guy">Tech guy</option>
+		        			<option value="I sell stuff">I sell stuff</option>
+		        			<option value="I write for me or others">I write for me or others</option>
+		        			<option value="I don´t have one">I don´t have one</option>
 		        		</select>
 	        		</li>
 	        	</ul>
