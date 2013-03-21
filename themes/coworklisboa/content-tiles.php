@@ -7,21 +7,7 @@
  */
 ?>
 
-	<div class="global_wrapper">
-
-
-		<div class="image_container_left">
-				<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/thumb.jpg"/>
-				<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/thumb.jpg"/>
-				<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/thumb.jpg"/>
-				<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/thumb.jpg"/>
-		</div>
-
-		<div class="image_container_right">
-				<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/video-thumb.jpg"/>
-		</div>
-
-	</div>
+	
 		
 
 		<div class="global_container">
@@ -50,4 +36,20 @@
 								</article>
 
 							</article><!-- #post-<?php the_ID(); ?> -->
+		</div>
+
+		<div class="global_wrapper">
+
+
+			<div class="image_container_left">
+					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/thumb.jpg"/>
+					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/thumb.jpg"/>
+					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/thumb.jpg"/>
+					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/thumb.jpg"/>
+			</div>
+
+			<div class="image_container_right">
+					<img src="<?php echo get_bloginfo('stylesheet_directory'); ?>/images/video-thumb.jpg"/>
+			</div>
+
 		</div>

@@ -381,7 +381,7 @@ textarea {
 }
 
 .general-title {
-	margin-bottom: 36px;
+	margin-bottom: 24px;
 	font-size: 22px;
 }
 
@@ -1177,7 +1177,7 @@ a.green, a.green:visited, a.green:hover {
 	width: 100%;
 	text-align: left;
 	position: relative;
-	min-height: 230px;
+	min-height: 270px;
 }
 
 .box-middle ul {
@@ -1416,7 +1416,38 @@ span.error{
 
 .general{width:42%; color:#000;}
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1448px) {
+	.image_container_right, .image_container_left {
+		width: 20%;
+	}
+}
+
+@media screen and (max-width: 1255px) {
+	.image_container_right, .image_container_left {
+		width: 18%;
+	}
+
+	.image_container_left img {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 1170px) {
+	.image_container_right, .image_container_left {
+		width: 16%;
+	}
+}
+
+@media screen and (max-width: 1097px) {
+	.image_container_right, .image_container_left {
+		width: 14%;
+	}
+}
+
+
+/*--- Iphone ---*/
+
+@media screen and (max-width: 1024px) {
       .container_side_left {
       	position: relative;
       	padding-top: 0;
@@ -1503,5 +1534,34 @@ span.error{
       	border-right: solid 3px #fff;
       	border-left: solid 3px #fff;
       	width: auto;
+      }
+
+      .gallery_container {
+      	margin: 0 20px;
+      }
+
+      .global_wrapper {
+      	position: relative;
+      	top: 0;
+      }
+	
+      .image_container_left {
+      	position: relative;
+      	margin: 0 20px;
+      	float: none;
+      	width: auto;
+		max-width: 1000px;
+      }
+
+      .image_container_left img {
+      	width: 200px;
+      	height: auto;
+      }
+
+      .image_container_right {
+      	float: none;
+      	width: auto;
+      	margin: 0 auto;
+      	text-align: center;
       }
 }
