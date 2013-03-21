@@ -1415,3 +1415,93 @@ span.error{
 }
 
 .general{width:42%; color:#000;}
+
+@media screen and (max-width: 700px) {
+      .container_side_left {
+      	position: relative;
+      	padding-top: 0;
+      }
+
+      .main-navigation a, .main-navigation li {
+      	display: inline;
+      	line-height: 26px;
+      }
+
+      .main-navigation {
+      	float: none;
+      }
+
+      #masthead {
+      	height: auto;
+
+      	-webkit-border-bottom-right-radius: 40px;
+		-webkit-border-bottom-left-radius: 40px;
+		-moz-border-radius-bottomleft: 40px;
+		-moz-border-radius-bottomright: 40px;
+		border-bottom-left-radius: 40px;
+		border-bottom-right-radius: 40px;
+		border-left: 3px solid #fff;
+		border-right: 3px solid #fff;
+		border-bottom: 3px solid #fff;
+
+		-webkit-border-top-right-radius: 0;
+		-moz-border-radius-topright: 0;
+		-moz-border-radius-bottomright: 40px;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 40px;
+		border-top: none;
+		border-right: 3px solid #fff;
+		border-bottom: 3px solid #fff;
+		text-align: center;
+		margin-bottom: 20px;
+      }
+
+      .social-links {
+      	position: relative;
+      	float: right;
+      	right: 0;
+      }
+
+      #content, #colophon {
+      	position: relative;
+      }
+
+      .container_side_right {
+      	position: relative;
+      	padding-top: 0;
+      }
+
+      #secondary {
+		-webkit-border-top-right-radius:40px;
+      	-webkit-border-top-left-radius: 40px;
+		-webkit-border-bottom-left-radius:0;
+		-moz-border-radius-topright: 40px;
+		-moz-border-radius-topleft: 40px;
+		-moz-border-radius-bottomleft: 0;
+		border-top-right-radius: 40px;
+		border-top-left-radius: 40px;
+		border-bottom-left-radius: 0;
+		border-top:3px solid #fff;
+		border-left:3px solid #fff;
+		border-right: 3px solid #fff;
+		border-bottom:none;
+		min-width: 90px;
+		height: auto;
+		text-align: center
+      }
+
+      #secondary a {
+      	line-height: 1;
+      }
+
+      #main {
+      	height: auto;
+      	min-height: 0;
+      }
+
+      #colophon {
+      	border-right: solid 3px #fff;
+      	border-left: solid 3px #fff;
+      	width: auto;
+      }
+}
