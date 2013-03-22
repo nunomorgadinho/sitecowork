@@ -88,14 +88,16 @@
 	    <div id="navigation" style="display:none;">
                     <ul>
                         <li class="selected">
-                            <a href="#">Account</a>
+                            <a href="#">step1</a>
                         </li>
                         <li>
-                            <a href="#">Personal Details</a>
+                            <a href="#">step2</a>
                         </li>
                         <li>
-                            <a href="#">Payment</a>
+                            <a href="#">step3</a>
                         </li>
 	    	</ul>
-	    	</div>
+	    </div><!-- #navigation -->
+	    	<div class="note"><p><?php _e('*tax inc.','cowork')?></p></div>
+	    	
 
