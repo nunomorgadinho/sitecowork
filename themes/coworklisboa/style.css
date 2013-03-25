@@ -780,6 +780,31 @@ body {
 	background-attachment:fixed;
 }
 
+.inner-form ::-webkit-input-placeholder {
+   color: #fff;
+   font-size: 16px;
+   font-family: 'estilo_textregular';
+}
+
+.inner-form input {
+	color: #fff;
+	font-size: 16px;
+	margin: 4px 4px;
+	width: 85%;
+	padding: 2px 6px;
+}
+
+.inner-form input:hover {
+	background: #e87678;
+}
+
+.inner-form input[type="password"] {
+	font-family: Arial;
+}
+
+.inner-form form{
+	margin-top: 24px;
+}
 
 
 .global_container {
