@@ -311,7 +311,7 @@ function new_submit_callback(){
 	
 	add_filter('wp_mail_content_type',create_function('', 'return "text/html";'));
 	$res = wp_mail($to, $subject, $message);
-	$res = wp_mail("info@coworklisboa.pt", $subject, $message);
+
 	$res = wp_mail("ana@widgilabs.com", $subject, $message);
 	
 	die($meta);
